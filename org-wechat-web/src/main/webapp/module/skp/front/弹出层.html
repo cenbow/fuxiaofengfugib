@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<!--弹出层-->
+
+<!--公共遮罩层-->
+<div class="pop_layer"></div>
+<!--引导提示层-->
+<div class="pop-tip">
+<p class="arrow"></p>
+<p class="tip-text">分享您的时尚大片<br/>
+让你的好友来为你助力吧</p>
+</div>
+<!--弹层1-->
+<div class="pop_con">
+<span class="close"></span>
+ <p class="tc text-p">您已经拍过了<br/>再拍原有照片和时尚指数<br/>会清零哦</p>
+ <p class="tc btn-p"><a href="" class="sm-btn blue-btn">确定</a></p>
+</div>
+<!--弹层2-->
+<div class="pop_con">
+<span class="close"></span>
+ <p class="tc text-p">今日已为好友助力<br/>明天再来吧</p>
+ <p class="tc btn-p"><a href="" class="sm-btn blue-btn">确定</a></p>
+</div>
+<!--弹层3-->
+<div class="pop_con">
+<span class="close"></span>
+ <p class="tc text-p">您还未拍摄个人时尚大片<br/>快点行动吧</p>
+ <p class="tc btn-p"><a href="" class="sm-btn blue-btn">确定</a></p>
+</div>
+<!--弹层4-->
+<div class="pop_con">
+<span class="close"></span>
+ <p class="tc img-p"><img src="images/code.jpg"/></p>
+ <p class="tc text-p">关注北京SKP官方微信<br/>查看每日幸运获奖用户<br/>
+快点 看看您是不是幸运儿</p>
+ <p class="tc btn-p"><a href="" class="sm-btn blue-btn">确定</a></p>
+</div>
+<!--弹层5-->
+<div class="pop_con">
+<span class="close"></span>
+ <p class="tc text-p">本期活动还未结束<br/>将于下周一12:00过后<br/>公布中奖名单</p>
+ <p class="tc btn-p"><a href="" class="sm-btn blue-btn">确定</a></p>
+</div>
+
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+//点击弹出层关闭
+$(".pop_con").click(function(){
+	$(this).fadeOut(200);
+	});
+</script>
+<script type="text/javascript">
+//弹出层高度居中
+$(".pop_con").each(function(){
+  $(this).css("margin-top",-$(this).height()/2);
+ });
+</script>
+</body>
+</html>
+ 

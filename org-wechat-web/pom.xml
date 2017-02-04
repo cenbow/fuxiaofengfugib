@@ -1,0 +1,113 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>wechat-web</artifactId>
+	<packaging>war</packaging>
+	<name>wechat-web</name>
+	<url>http://wechat.web.com.org</url>
+
+	<properties>
+		<!-- jar 版本设置 -->	
+		<logback.version>1.1.3</logback.version>
+	</properties>
+
+    <parent>
+	   <groupId>com.org</groupId>
+	   <artifactId>wechat-parent</artifactId>
+	   <version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<dependencies>
+		<!-- logback -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
+
+	    <dependency>
+		   <groupId>com.org</groupId>
+		   <artifactId>org-wechat-framework</artifactId>
+		   <version>1.0.0-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.org</groupId>
+		    <artifactId>org-weixin</artifactId>
+		    <version>1.0.0-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+		  <groupId>com.cqliving</groupId>
+		  <artifactId>cqliving-module-memcached</artifactId>
+		  <version>1.0.0-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.cqliving</groupId>
+		    <artifactId>cqliving-tool</artifactId>
+		    <version>1.0.0-SNAPSHOT</version>
+		</dependency>
+
+	</dependencies>
+
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<!-- Development Environment -->
+			<properties>
+				<package.target>dev</package.target>
+			</properties>
+		</profile>
+		<profile>
+			<id>test</id>
+			<!-- test Environment -->
+			<properties>
+				<package.target>test</package.target>
+			</properties>
+		</profile>
+		<profile>
+			<id>prod</id>
+			<!-- Production Environment -->
+			<properties>
+				<package.target>prod</package.target>
+			</properties>
+		</profile>
+		<profile>
+			<id>ready</id>
+			<!-- Production Environment -->
+			<properties>
+				<package.target>ready</package.target>
+			</properties>
+		</profile>
+	</profiles>
+
+	<build>
+		<finalName>wechat-web</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<warName>wechat-web</warName>
+					<webResources>
+						<resource>
+							<!-- relative to the pom.xml -->
+							<directory>deploy/${package.target}</directory>
+							<targetPath>WEB-INF/classes</targetPath>
+						</resource>
+					</webResources>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+	<meta HTTP-EQUIV="expires" CONTENT="0">
+	<meta id="viewport" name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>index</title>
+	<meta name="Keywords" content="">
+	<meta name="Description" content=""></head>
+	<script src="js/libs/jquery.1.8.2.min.js"></script>
+	<script src="js/common.js"></script>
+	<link href="css/animate.min.css" rel="stylesheet">
+	<link href="css/common.css" rel="stylesheet">
+	<link href="css/fn.css" rel="stylesheet">
+<body>
+	<div class="index">
+		<b class="return"><img src="images/rerutn.png"></b>
+		<!-- <div class="bag"><img src="images/bag1.png"></div> -->
+		<div class="bg-img">
+			<img src="images/index-bg-my.jpg">
+			<div class="index-text"><img src="images/index-text-my.png"></div>
+			<div class="index-my">恭喜您中了XXX奖品！<br>在吃货的路上越走越远吧!</div>
+			<div class="my-btn">
+				<a href=""><img src="images/btn-continue.png"></a>
+				<a href=""><img src="images/btn-see.png"></a>
+			</div>
+		</div>		
+	</div>
+	<div class="no-data">弹窗提示!</div>
+	<div class="no-html"><img src="images/data-no.png" alt="">对不起，没有数据</div>
+	<div class="no-html"><img src="images/data-yes.png" alt="">成功</div>
+	<div class="loding"><img src="images/loading.png" alt=""></div>
+</body>
+<script type="text/javascript">
+	$(function(){
+		$(".eat-list li").on("click",function(){
+			$(this).addClass("on")
+		})
+
+
+		var bagBg = null;
+		var bagNum = 1;
+
+		function bag() {
+			bagNum++;
+			if (bagNum % 2 == 1) {
+				$(".bag img").eq(0).hide();
+				$(".bag img").eq(1).show();
+			} else {
+				$(".bag img").eq(0).show();
+				$(".bag img").eq(1).hide();
+			};
+			bagBg = setTimeout(function() {
+				bag()
+			}, 500)
+		}
+		// bag()
+
+
+
+
+
+	})
+</script>
+</html>
+
