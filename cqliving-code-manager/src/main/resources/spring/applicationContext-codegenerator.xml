@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+	http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+	http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd"
+	default-lazy-init="true">
+
+	<description>代码生成器</description>
+
+	<bean id="generateConfiguration" class="com.cqliving.codegenerator.GenerateConfiguration">
+		<property name="workspace" value="${generator.workspace}" />
+		<property name="rootPackage" value="${generator.rootPackage}" />
+		<property name="codePath" value="${generator.codePath}" />
+		<property name="testPath" value="${generator.testPath}" />
+		<property name="resourcePath" value="${generator.resourcePath}" />
+		<property name="webappPath" value="${generator.webappPath}" />
+		<property name="pagePath" value="${generator.pagePath}"/>
+		<property name="templatePath" value="${generator.templatePath}" />
+
+        <property name="pageMapping" value="${generator.page.mapping}" />
+
+        <property name="webWorkspace" value="${generator.web.workspace}" />
+        <property name="webPackage" value="${generator.web.package}" />
+
+        <property name="tilesName" value="${generator.page.tilesName}" />
+        <property name="pagePrefix" value="${generator.page.prefix}" />
+
+        <property name="searchColumns" value="${generator.page.searchColumns}" />
+        <property name="listColumns" value="${generator.page.listColumns}" />
+        <property name="detailColumns" value="${generator.page.detailColumns}" />
+        <property name="viewColumns" value="${generator.page.viewColumns}" />
+
+        <property name="generateOptions" value="${generator.options}" />
+
+	</bean>
+
+	<!-- 自动根据数据源，选择数据库表加载的数据库方言 -->
+	<bean id="metadataLoadDialect" factory-method="getMetadataLoadDialect" class="com.cqliving.codegenerator.db.MetadataLoadDialectFactory">
+		<constructor-arg ref="jdbcTemplate" />
+	</bean>
+
+	<!-- 类/package/文件/页面 名称规则 -->
+	<bean id="namesResolver" class="com.cqliving.codegenerator.parser.DefaultNamesResolver">
+		<property name="generateConfiguration" ref="generateConfiguration" />
+		<property name="tableToEntityIgnorPrefix" value="${generator.tableToEntityIgnorPrefix}" />
+		<!--<property name="listPagePostfit" value=".jsp" />-->
+	</bean>
+
+	<!-- 代码生成工厂 -->
+	<bean id="codeGeneratorFactory" class="com.cqliving.codegenerator.DefaultCodeGeneratorFactory">
+		<property name="generateConfiguration" ref="generateConfiguration" />
+		<property name="metadataLoadDialect" ref="metadataLoadDialect" />
+		<property name="namesResolver" ref="namesResolver" />
+	</bean>
+
+
+	<!-- 各模块生成实现 -->
+	<bean id="domainModuleGenerator" class="com.cqliving.codegenerator.module.DomainModuleGenerator">
+		<property name="generateConfiguration" ref="generateConfiguration" />
+		<property name="templateName" value="domain.ftl" />
+	</bean>
+
+	<bean id="jpaDaoModuleGenerator" class="com.cqliving.codegenerator.module.JpaDaoModuleGenerator">
+		<property name="generateConfiguration" ref="generateConfiguration" />
+		<property name="templateName" value="dao.ftl" />
+	</bean>
+
+	<!--<bean id="daoTestModuleGenerator" class="com.cqliving.codegenerator22.module.DaoTestModuleGenerator">
+		<property name="generateConfiguration" ref="generateConfiguration" />
+		<property name="templateName" value="daoTest.ftl" />
+	</bean>-->
+
+	<!-- Manager -->
+	<bean id="managerInterfaceModuleGenerator" class="com.cqliving.codegenerator.module.ManagerInterfaceModuleGenerator">
+		<property name="generateConfiguration" ref="generateConfiguration" />
+		<property name="templateName" value="manager.ftl" />
+	</bean>
+
+	<bean id="managerImplModuleGenerator" class="com.cqliving.codegenerator.module.ManagerImplModuleGenerator">
+		<property name="generateConfiguration" ref="generateConfiguration" />
+		<property name="templateName" value="managerImpl.ftl" />
+	</bean>
+	
+	<!-- Service -->
+	<bean id="serviceInterfaceModuleGenerator" class="com.cqliving.codegenerator.module.ServiceInterfaceModuleGenerator">
+		<property name="generateConfiguration" ref="generateConfiguration" />
+		<property name="templateName" value="service.ftl" />
+	</bean>
+
+	<bean id="serviceImplModuleGenerator" class="com.cqliving.codegenerator.module.ServiceImplModuleGenerator">
+		<property name="generateConfiguration" ref="generateConfiguration" />
+		<property name="templateName" value="serviceImpl.ftl" />
+	</bean>
+
+	<bean id="managerControllerModuleGenerator" class="com.cqliving.codegenerator.module.ManagerControllerModuleGenerator">
+		<property name="generateConfiguration" ref="generateConfiguration" />
+		<property name="templateName" value="controller.ftl" />
+	</bean>
+
+	<bean id="pagesModuleGenerator" class="com.cqliving.codegenerator.module.PagesModuleGenerator">
+		<property name="generateConfiguration" ref="generateConfiguration" />
+		<property name="templateName" value="listPage.ftl,list_pagePage.ftl,detailPage.ftl,viewPage.ftl" />
+	</bean>
+
+
+
+</beans>

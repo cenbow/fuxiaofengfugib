@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/2002/xmlspec/dtd/2.10/xmlspec.dtd">
+<configuration>
+	<property name="LOG_HOME" value="c:/logs"/>
+	<property name="PROJECT_NAME" value="cqliving_energy_terminal"/>
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d [%thread] %-5level %logger{100} - %msg%n</pattern>
+		</encoder>
+	</appender>
+	<!-- 按照每天生成日志文件【ERROR级别】  -->
+	<appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<Encoding>UTF-8</Encoding>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+		<!--日志文件输出的文件名 -->
+			<FileNamePattern>${LOG_HOME}/${PROJECT_NAME}.%d{yyyy-MM-dd}.e.log</FileNamePattern>
+			<MaxHistory>30</MaxHistory>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%d [%thread] %-5level %logger{100} - %msg%n</pattern>
+		</layout>
+		<!--日志文件最大的大小 -->
+		<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<MaxFileSize>100MB</MaxFileSize>
+		</triggeringPolicy>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>ERROR</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+	</appender>
+	<!-- 按照每天生成日志文件【WARN级别】  -->
+	<appender name="WARN_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<Encoding>UTF-8</Encoding>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+		<!--日志文件输出的文件名 -->
+			<FileNamePattern>${LOG_HOME}/${PROJECT_NAME}.%d{yyyy-MM-dd}.w.log</FileNamePattern>
+			<MaxHistory>30</MaxHistory>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%d [%thread] %-5level %logger{50} - %msg%n</pattern>
+		</layout>
+		<!--日志文件最大的大小 -->
+		<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<MaxFileSize>100MB</MaxFileSize>
+		</triggeringPolicy>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>WARN</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+	</appender>
+	<!-- 按照每天生成日志文件【INFO级别】  -->
+	<appender name="INFO_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<Encoding>UTF-8</Encoding>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+		<!--日志文件输出的文件名 -->
+			<FileNamePattern>${LOG_HOME}/${PROJECT_NAME}.%d{yyyy-MM-dd}.i.log</FileNamePattern>
+			<MaxHistory>30</MaxHistory>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%d [%thread] %-5level %logger{50} - %msg%n</pattern>
+		</layout>
+		<!--日志文件最大的大小 -->
+		<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<MaxFileSize>100MB</MaxFileSize>
+		</triggeringPolicy>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>INFO</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+	</appender>
+	<logger name="com.cztc.entreship" additivity="false" level="ERROR">
+		<appender-ref ref="ERROR_FILE" />
+	</logger>
+	<logger name="com.cztc.entreship" additivity="false" level="WARN">
+		<appender-ref ref="WARN_FILE" />
+	</logger>
+	<logger name="com.cztc.entreship" additivity="false" level="INFO">
+		<appender-ref ref="INFO_FILE" />
+	</logger>
+<!-- 	<logger name="org.springframework" additivity="false" level="info"> -->
+<!-- 		<appender-ref ref="STDOUT" /> -->
+<!-- 	</logger> -->
+<!-- 	<logger name="org.hibernate.tool.hbm2ddl" level="DEBUG"> -->
+<!-- 		<appender-ref ref="STDOUT" /> -->
+<!-- 	</logger>   -->
+<!--     <logger name="org.hibernate.type.descriptor.sql.BasicExtractor" level="DEBUG"> -->
+<!--     	<appender-ref ref="STDOUT" /> -->
+<!-- 	</logger> -->
+<!--     <logger name="org.hibernate.SQL" level="DEBUG"> -->
+<!--     	<appender-ref ref="STDOUT" /> -->
+<!-- 	</logger> -->
+<!--     <logger name="org.hibernate.engine.QueryParameters" level="DEBUG"> -->
+<!--     	<appender-ref ref="STDOUT" /> -->
+<!-- 	</logger> -->
+<!--     <logger name="org.hibernate.engine.query.HQLQueryPlan" level="DEBUG"> -->
+<!--     	<appender-ref ref="STDOUT" /> -->
+<!-- 	</logger> -->
+	
+<!-- 	<root level="debug"> -->
+<!-- 		<appender-ref ref="STDOUT" /> -->
+<!-- 	</root> -->
+</configuration>

@@ -1,0 +1,184 @@
+2017-01-23 09:18:30,648 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2017-01-23 09:18:30,753 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Mon Jan 23 09:18:30 CST 2017]; root of context hierarchy>
+2017-01-23 09:18:30,798 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/applicationContext-main.xml]>
+2017-01-23 09:18:30,933 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/applicationContext-service.xml]>
+2017-01-23 09:18:31,503 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from URL [jar:file:/Users/xiaofengfu/maven_repos/com/cqliving/cqliving-basic/1.0.0-SNAPSHOT/cqliving-basic-1.0.0-SNAPSHOT.jar!/spring/applicationContext-basic-profiles.xml]>
+2017-01-23 09:18:31,531 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from URL [jar:file:/Users/xiaofengfu/maven_repos/com/cqliving/cqliving-basic/1.0.0-SNAPSHOT/cqliving-basic-1.0.0-SNAPSHOT.jar!/spring/applicationContext-basic-service.xml]>
+2017-01-23 09:18:31,544 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from URL [jar:file:/Users/xiaofengfu/maven_repos/com/cqliving/cqliving-basic/1.0.0-SNAPSHOT/cqliving-basic-1.0.0-SNAPSHOT.jar!/spring/applicationContext-basic-jpa.xml]>
+2017-01-23 09:18:31,612 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from URL [file:/Users/xiaofengfu/Documents/workspace/cqliving-online/target/classes/spring/applicationContext-online-profiles.xml]>
+2017-01-23 09:18:31,633 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from URL [file:/Users/xiaofengfu/Documents/workspace/cqliving-online/target/classes/spring/applicationContext-online-jpa.xml]>
+2017-01-23 09:26:17,400 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2017-01-23 09:26:17,473 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Mon Jan 23 09:26:17 CST 2017]; root of context hierarchy>
+2017-01-23 09:26:17,500 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/applicationContext-main.xml]>
+2017-01-23 09:26:17,590 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/applicationContext-service.xml]>
+2017-01-23 09:26:18,122 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from URL [jar:file:/Users/xiaofengfu/maven_repos/com/cqliving/cqliving-basic/1.0.0-SNAPSHOT/cqliving-basic-1.0.0-SNAPSHOT.jar!/spring/applicationContext-basic-profiles.xml]>
+2017-01-23 09:26:18,150 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from URL [jar:file:/Users/xiaofengfu/maven_repos/com/cqliving/cqliving-basic/1.0.0-SNAPSHOT/cqliving-basic-1.0.0-SNAPSHOT.jar!/spring/applicationContext-basic-service.xml]>
+2017-01-23 09:26:18,160 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from URL [jar:file:/Users/xiaofengfu/maven_repos/com/cqliving/cqliving-basic/1.0.0-SNAPSHOT/cqliving-basic-1.0.0-SNAPSHOT.jar!/spring/applicationContext-basic-jpa.xml]>
+2017-01-23 09:26:18,225 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from URL [file:/Users/xiaofengfu/Documents/workspace/cqliving-online/target/classes/spring/applicationContext-online-profiles.xml]>
+2017-01-23 09:26:18,266 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from URL [file:/Users/xiaofengfu/Documents/workspace/cqliving-online/target/classes/spring/applicationContext-online-jpa.xml]>
+2017-01-23 09:26:36,760 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from URL [file:/Users/xiaofengfu/Documents/workspace/cqliving-online/target/classes/spring/applicationContext-service-aop.xml]>
+2017-01-23 09:26:36,840 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from URL [jar:file:/Users/xiaofengfu/maven_repos/com/cqliving/cqliving-redis/1.0.0-SNAPSHOT/cqliving-redis-1.0.0-SNAPSHOT.jar!/spring/applicationContext-cache.xml]>
+2017-01-23 09:26:36,876 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/applicationContext-scheduling.xml]>
+2017-01-23 09:26:37,803 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [application.development.properties]>
+2017-01-23 09:26:37,824 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [application.development.properties]>
+2017-01-23 09:26:37,832 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [application.development.properties]>
+2017-01-23 09:26:38,064 INFO [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] - <Bean '(inner bean)#3e62ab78' of type [class org.springframework.aop.aspectj.AspectJAroundAdvice] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)>
+2017-01-23 09:26:38,213 INFO [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] - <Bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0' of type [class org.springframework.aop.aspectj.AspectJPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)>
+2017-01-23 09:26:38,294 INFO [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] - <Bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0' of type [class org.springframework.transaction.annotation.AnnotationTransactionAttributeSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)>
+2017-01-23 09:26:38,393 INFO [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] - <Bean 'org.springframework.transaction.config.internalTransactionAdvisor' of type [class org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)>
+2017-01-23 09:26:39,047 INFO [com.alibaba.druid.pool.DruidDataSource] - <{dataSource-1} inited>
+2017-01-23 09:26:39,586 INFO [com.cqliving.framework.common.dao.jpa.FrameworkEntityManagerFactoryBean] - <Building JPA container EntityManagerFactory for persistence unit 'default'>
+2017-01-23 09:26:39,734 INFO [org.hibernate.annotations.common.Version] - <HCANN000001: Hibernate Commons Annotations {4.0.1.Final}>
+2017-01-23 09:26:39,743 INFO [org.hibernate.Version] - <HHH000412: Hibernate Core {4.1.7.Final}>
+2017-01-23 09:26:39,746 INFO [org.hibernate.cfg.Environment] - <HHH000206: hibernate.properties not found>
+2017-01-23 09:26:39,748 INFO [org.hibernate.cfg.Environment] - <HHH000021: Bytecode provider name : javassist>
+2017-01-23 09:26:39,770 INFO [org.hibernate.ejb.Ejb3Configuration] - <HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]>
+2017-01-23 09:26:39,995 INFO [org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator] - <HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider>
+2017-01-23 09:26:40,034 INFO [org.hibernate.dialect.Dialect] - <HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect>
+2017-01-23 09:26:40,050 INFO [org.hibernate.engine.transaction.internal.TransactionFactoryInitiator] - <HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory>
+2017-01-23 09:26:40,054 INFO [org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory] - <HHH000397: Using ASTQueryTranslatorFactory>
+2017-01-23 09:26:40,099 INFO [org.hibernate.validator.internal.util.Version] - <HV000001: Hibernate Validator 4.3.0.Final>
+2017-01-23 09:26:40,529 INFO [com.alibaba.druid.pool.DruidDataSource] - <{dataSource-2} inited>
+2017-01-23 09:26:40,714 INFO [com.cqliving.framework.common.dao.jpa.FrameworkEntityManagerFactoryBean] - <Building JPA container EntityManagerFactory for persistence unit 'default'>
+2017-01-23 09:26:40,716 INFO [org.hibernate.ejb.Ejb3Configuration] - <HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]>
+2017-01-23 09:26:41,100 INFO [org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator] - <HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider>
+2017-01-23 09:26:41,103 INFO [org.hibernate.dialect.Dialect] - <HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect>
+2017-01-23 09:26:41,105 INFO [org.hibernate.engine.transaction.internal.TransactionFactoryInitiator] - <HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory>
+2017-01-23 09:26:41,107 INFO [org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory] - <HHH000397: Using ASTQueryTranslatorFactory>
+2017-01-23 09:40:28,500 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2017-01-23 09:40:28,592 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Mon Jan 23 09:40:28 CST 2017]; root of context hierarchy>
+2017-01-23 09:40:28,630 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/applicationContext-main.xml]>
+2017-01-23 09:40:28,735 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/applicationContext-service.xml]>
+2017-01-23 09:40:29,329 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from URL [jar:file:/Users/xiaofengfu/maven_repos/com/cqliving/cqliving-basic/1.0.0-SNAPSHOT/cqliving-basic-1.0.0-SNAPSHOT.jar!/spring/applicationContext-basic-profiles.xml]>
+2017-01-23 09:40:29,360 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from URL [jar:file:/Users/xiaofengfu/maven_repos/com/cqliving/cqliving-basic/1.0.0-SNAPSHOT/cqliving-basic-1.0.0-SNAPSHOT.jar!/spring/applicationContext-basic-service.xml]>
+2017-01-23 09:40:29,375 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from URL [jar:file:/Users/xiaofengfu/maven_repos/com/cqliving/cqliving-basic/1.0.0-SNAPSHOT/cqliving-basic-1.0.0-SNAPSHOT.jar!/spring/applicationContext-basic-jpa.xml]>
+2017-01-23 09:40:29,487 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from URL [file:/Users/xiaofengfu/Documents/workspace/cqliving-online/target/classes/spring/applicationContext-online-profiles.xml]>
+2017-01-23 09:40:29,507 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from URL [file:/Users/xiaofengfu/Documents/workspace/cqliving-online/target/classes/spring/applicationContext-online-jpa.xml]>
+2017-01-23 09:40:46,027 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from URL [file:/Users/xiaofengfu/Documents/workspace/cqliving-online/target/classes/spring/applicationContext-service-aop.xml]>
+2017-01-23 09:40:46,058 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from URL [jar:file:/Users/xiaofengfu/maven_repos/com/cqliving/cqliving-redis/1.0.0-SNAPSHOT/cqliving-redis-1.0.0-SNAPSHOT.jar!/spring/applicationContext-cache.xml]>
+2017-01-23 09:40:46,086 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/applicationContext-scheduling.xml]>
+2017-01-23 09:40:46,712 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [application.development.properties]>
+2017-01-23 09:40:46,728 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [application.development.properties]>
+2017-01-23 09:40:46,733 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [application.development.properties]>
+2017-01-23 09:40:46,841 INFO [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] - <Bean '(inner bean)#4fb81d27' of type [class org.springframework.aop.aspectj.AspectJAroundAdvice] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)>
+2017-01-23 09:40:46,910 INFO [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] - <Bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0' of type [class org.springframework.aop.aspectj.AspectJPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)>
+2017-01-23 09:40:46,978 INFO [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] - <Bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0' of type [class org.springframework.transaction.annotation.AnnotationTransactionAttributeSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)>
+2017-01-23 09:40:47,049 INFO [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] - <Bean 'org.springframework.transaction.config.internalTransactionAdvisor' of type [class org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)>
+2017-01-23 09:40:47,616 INFO [com.alibaba.druid.pool.DruidDataSource] - <{dataSource-1} inited>
+2017-01-23 09:40:47,971 INFO [com.cqliving.framework.common.dao.jpa.FrameworkEntityManagerFactoryBean] - <Building JPA container EntityManagerFactory for persistence unit 'default'>
+2017-01-23 09:40:48,065 INFO [org.hibernate.annotations.common.Version] - <HCANN000001: Hibernate Commons Annotations {4.0.1.Final}>
+2017-01-23 09:40:48,070 INFO [org.hibernate.Version] - <HHH000412: Hibernate Core {4.1.7.Final}>
+2017-01-23 09:40:48,071 INFO [org.hibernate.cfg.Environment] - <HHH000206: hibernate.properties not found>
+2017-01-23 09:40:48,072 INFO [org.hibernate.cfg.Environment] - <HHH000021: Bytecode provider name : javassist>
+2017-01-23 09:40:48,085 INFO [org.hibernate.ejb.Ejb3Configuration] - <HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]>
+2017-01-23 09:40:48,270 INFO [org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator] - <HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider>
+2017-01-23 09:40:48,299 INFO [org.hibernate.dialect.Dialect] - <HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect>
+2017-01-23 09:40:48,317 INFO [org.hibernate.engine.transaction.internal.TransactionFactoryInitiator] - <HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory>
+2017-01-23 09:40:48,319 INFO [org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory] - <HHH000397: Using ASTQueryTranslatorFactory>
+2017-01-23 09:40:48,356 INFO [org.hibernate.validator.internal.util.Version] - <HV000001: Hibernate Validator 4.3.0.Final>
+2017-01-23 09:40:48,863 INFO [com.alibaba.druid.pool.DruidDataSource] - <{dataSource-2} inited>
+2017-01-23 09:40:49,049 INFO [com.cqliving.framework.common.dao.jpa.FrameworkEntityManagerFactoryBean] - <Building JPA container EntityManagerFactory for persistence unit 'default'>
+2017-01-23 09:40:49,051 INFO [org.hibernate.ejb.Ejb3Configuration] - <HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]>
+2017-01-23 09:40:49,423 INFO [org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator] - <HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider>
+2017-01-23 09:40:49,428 INFO [org.hibernate.dialect.Dialect] - <HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect>
+2017-01-23 09:40:49,429 INFO [org.hibernate.engine.transaction.internal.TransactionFactoryInitiator] - <HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory>
+2017-01-23 09:40:49,429 INFO [org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory] - <HHH000397: Using ASTQueryTranslatorFactory>
+2017-01-23 09:40:50,502 WARN [org.hibernate.ejb.internal.EntityManagerFactoryRegistry] - <HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'>
+2017-01-23 09:40:50,513 INFO [org.springframework.beans.factory.config.PropertiesFactoryBean] - <Loading properties file from URL [file:/Users/xiaofengfu/Documents/workspace/cqliving-cloud-scheduler/target/classes/application.development.properties]>
+2017-01-23 09:40:51,101 INFO [com.cqliving.basic.service.impl.BasicServiceImpl] - <BasicServiceImpl--->启动加载公用字典数据>
+2017-01-23 09:40:55,542 INFO [org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] - <Initializing ExecutorService  'syncViewCountScheduler'>
+2017-01-23 09:40:55,583 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization completed in 27082 ms>
+2017-01-23 09:40:55,669 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springServlet': initialization started>
+2017-01-23 09:40:55,673 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'springServlet-servlet': startup date [Mon Jan 23 09:40:55 CST 2017]; parent: Root WebApplicationContext>
+2017-01-23 09:40:55,673 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/applicationContext-servlet.xml]>
+2017-01-23 09:40:55,839 INFO [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] - <Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'>
+2017-01-23 09:40:56,181 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springServlet-servlet': startup date [Mon Jan 23 09:40:55 CST 2017]; parent: Root WebApplicationContext>
+2017-01-23 09:40:56,248 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springServlet-servlet': startup date [Mon Jan 23 09:40:55 CST 2017]; parent: Root WebApplicationContext>
+2017-01-23 09:41:55,068 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2017-01-23 09:41:55,156 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Mon Jan 23 09:41:55 CST 2017]; root of context hierarchy>
+2017-01-23 09:41:55,192 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/applicationContext-main.xml]>
+2017-01-23 09:41:55,293 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/applicationContext-service.xml]>
+2017-01-23 09:41:55,905 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from URL [jar:file:/Users/xiaofengfu/maven_repos/com/cqliving/cqliving-basic/1.0.0-SNAPSHOT/cqliving-basic-1.0.0-SNAPSHOT.jar!/spring/applicationContext-basic-profiles.xml]>
+2017-01-23 09:41:55,947 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from URL [jar:file:/Users/xiaofengfu/maven_repos/com/cqliving/cqliving-basic/1.0.0-SNAPSHOT/cqliving-basic-1.0.0-SNAPSHOT.jar!/spring/applicationContext-basic-service.xml]>
+2017-01-23 09:41:55,960 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from URL [jar:file:/Users/xiaofengfu/maven_repos/com/cqliving/cqliving-basic/1.0.0-SNAPSHOT/cqliving-basic-1.0.0-SNAPSHOT.jar!/spring/applicationContext-basic-jpa.xml]>
+2017-01-23 09:41:56,120 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from URL [file:/Users/xiaofengfu/Documents/workspace/cqliving-online/target/classes/spring/applicationContext-online-profiles.xml]>
+2017-01-23 09:41:56,152 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from URL [file:/Users/xiaofengfu/Documents/workspace/cqliving-online/target/classes/spring/applicationContext-online-jpa.xml]>
+2017-01-23 09:42:12,004 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from URL [file:/Users/xiaofengfu/Documents/workspace/cqliving-online/target/classes/spring/applicationContext-service-aop.xml]>
+2017-01-23 09:42:12,032 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from URL [jar:file:/Users/xiaofengfu/maven_repos/com/cqliving/cqliving-redis/1.0.0-SNAPSHOT/cqliving-redis-1.0.0-SNAPSHOT.jar!/spring/applicationContext-cache.xml]>
+2017-01-23 09:42:12,066 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/applicationContext-scheduling.xml]>
+2017-01-23 09:42:12,647 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [application.development.properties]>
+2017-01-23 09:42:12,667 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [application.development.properties]>
+2017-01-23 09:42:12,675 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [application.development.properties]>
+2017-01-23 09:42:12,802 INFO [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] - <Bean '(inner bean)#3e62ab78' of type [class org.springframework.aop.aspectj.AspectJAroundAdvice] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)>
+2017-01-23 09:42:12,893 INFO [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] - <Bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0' of type [class org.springframework.aop.aspectj.AspectJPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)>
+2017-01-23 09:42:12,977 INFO [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] - <Bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0' of type [class org.springframework.transaction.annotation.AnnotationTransactionAttributeSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)>
+2017-01-23 09:42:13,042 INFO [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] - <Bean 'org.springframework.transaction.config.internalTransactionAdvisor' of type [class org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)>
+2017-01-23 09:42:13,600 INFO [com.alibaba.druid.pool.DruidDataSource] - <{dataSource-1} inited>
+2017-01-23 09:42:13,951 INFO [com.cqliving.framework.common.dao.jpa.FrameworkEntityManagerFactoryBean] - <Building JPA container EntityManagerFactory for persistence unit 'default'>
+2017-01-23 09:42:14,047 INFO [org.hibernate.annotations.common.Version] - <HCANN000001: Hibernate Commons Annotations {4.0.1.Final}>
+2017-01-23 09:42:14,052 INFO [org.hibernate.Version] - <HHH000412: Hibernate Core {4.1.7.Final}>
+2017-01-23 09:42:14,054 INFO [org.hibernate.cfg.Environment] - <HHH000206: hibernate.properties not found>
+2017-01-23 09:42:14,056 INFO [org.hibernate.cfg.Environment] - <HHH000021: Bytecode provider name : javassist>
+2017-01-23 09:42:14,074 INFO [org.hibernate.ejb.Ejb3Configuration] - <HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]>
+2017-01-23 09:42:14,252 INFO [org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator] - <HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider>
+2017-01-23 09:42:14,284 INFO [org.hibernate.dialect.Dialect] - <HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect>
+2017-01-23 09:42:14,301 INFO [org.hibernate.engine.transaction.internal.TransactionFactoryInitiator] - <HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory>
+2017-01-23 09:42:14,304 INFO [org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory] - <HHH000397: Using ASTQueryTranslatorFactory>
+2017-01-23 09:42:14,343 INFO [org.hibernate.validator.internal.util.Version] - <HV000001: Hibernate Validator 4.3.0.Final>
+2017-01-23 09:42:14,784 INFO [com.alibaba.druid.pool.DruidDataSource] - <{dataSource-2} inited>
+2017-01-23 09:42:14,963 INFO [com.cqliving.framework.common.dao.jpa.FrameworkEntityManagerFactoryBean] - <Building JPA container EntityManagerFactory for persistence unit 'default'>
+2017-01-23 09:42:14,964 INFO [org.hibernate.ejb.Ejb3Configuration] - <HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]>
+2017-01-23 09:42:15,310 INFO [org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator] - <HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider>
+2017-01-23 09:42:15,313 INFO [org.hibernate.dialect.Dialect] - <HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect>
+2017-01-23 09:42:15,314 INFO [org.hibernate.engine.transaction.internal.TransactionFactoryInitiator] - <HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory>
+2017-01-23 09:42:15,317 INFO [org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory] - <HHH000397: Using ASTQueryTranslatorFactory>
+2017-01-23 09:42:16,651 WARN [org.hibernate.ejb.internal.EntityManagerFactoryRegistry] - <HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'>
+2017-01-23 09:42:16,662 INFO [org.springframework.beans.factory.config.PropertiesFactoryBean] - <Loading properties file from URL [file:/Users/xiaofengfu/Documents/workspace/cqliving-cloud-scheduler/target/classes/application.development.properties]>
+2017-01-23 09:42:17,459 INFO [com.cqliving.basic.service.impl.BasicServiceImpl] - <BasicServiceImpl--->启动加载公用字典数据>
+2017-01-23 09:42:22,190 INFO [org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] - <Initializing ExecutorService  'syncViewCountScheduler'>
+2017-01-23 09:42:22,240 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization completed in 27171 ms>
+2017-01-23 09:42:22,339 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springServlet': initialization started>
+2017-01-23 09:42:22,342 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'springServlet-servlet': startup date [Mon Jan 23 09:42:22 CST 2017]; parent: Root WebApplicationContext>
+2017-01-23 09:42:22,342 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/applicationContext-servlet.xml]>
+2017-01-23 09:42:22,534 INFO [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] - <Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'>
+2017-01-23 09:42:22,935 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springServlet-servlet': startup date [Mon Jan 23 09:42:22 CST 2017]; parent: Root WebApplicationContext>
+2017-01-23 09:42:22,998 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springServlet-servlet': startup date [Mon Jan 23 09:42:22 CST 2017]; parent: Root WebApplicationContext>
+2017-01-23 09:42:23,003 INFO [com.cqliving.cloud.scheduler.task.impl.ManuscriptInfoTask] - <同步新闻浏览量开始。。。。。。。。。。。。>
+2017-01-23 09:42:23,228 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springServlet': initialization completed in 889 ms>
+2017-01-23 09:44:13,169 INFO [com.cqliving.cloud.scheduler.task.impl.ManuscriptInfoTask] - <同步新闻浏览量。。。。。结束。。。。。。。>
+2017-01-23 09:44:14,004 INFO [com.cqliving.cloud.scheduler.task.impl.ManuscriptInfoTask] - <同步新闻浏览量开始。。。。。。。。。。。。>
+2017-01-23 09:44:17,305 INFO [com.cqliving.cloud.scheduler.task.impl.ManuscriptInfoTask] - <同步新闻浏览量。。。。。结束。。。。。。。>
+2017-01-23 09:44:18,001 INFO [com.cqliving.cloud.scheduler.task.impl.ManuscriptInfoTask] - <同步新闻浏览量开始。。。。。。。。。。。。>
+2017-01-23 09:44:20,632 INFO [com.cqliving.cloud.scheduler.task.impl.ManuscriptInfoTask] - <同步新闻浏览量。。。。。结束。。。。。。。>
+2017-01-23 09:44:21,000 INFO [com.cqliving.cloud.scheduler.task.impl.ManuscriptInfoTask] - <同步新闻浏览量开始。。。。。。。。。。。。>
+2017-01-23 09:44:22,174 INFO [com.cqliving.cloud.scheduler.task.impl.ManuscriptInfoTask] - <同步新闻浏览量。。。。。结束。。。。。。。>
+2017-01-23 09:44:23,000 INFO [com.cqliving.cloud.scheduler.task.impl.ManuscriptInfoTask] - <同步新闻浏览量开始。。。。。。。。。。。。>
+2017-01-23 09:44:29,010 INFO [com.cqliving.cloud.scheduler.task.impl.ManuscriptInfoTask] - <同步新闻浏览量。。。。。结束。。。。。。。>
+2017-01-23 09:44:30,000 INFO [com.cqliving.cloud.scheduler.task.impl.ManuscriptInfoTask] - <同步新闻浏览量开始。。。。。。。。。。。。>
+2017-01-23 09:44:30,004 INFO [com.cqliving.cloud.scheduler.task.impl.ManuscriptInfoTask] - <同步新闻浏览量。。。。。结束。。。。。。。>
+2017-01-23 09:44:31,004 INFO [com.cqliving.cloud.scheduler.task.impl.ManuscriptInfoTask] - <同步新闻浏览量开始。。。。。。。。。。。。>
+2017-01-23 09:44:31,007 INFO [com.cqliving.cloud.scheduler.task.impl.ManuscriptInfoTask] - <同步新闻浏览量。。。。。结束。。。。。。。>
+2017-01-23 09:44:32,002 INFO [com.cqliving.cloud.scheduler.task.impl.ManuscriptInfoTask] - <同步新闻浏览量开始。。。。。。。。。。。。>
+2017-01-23 09:44:32,005 INFO [com.cqliving.cloud.scheduler.task.impl.ManuscriptInfoTask] - <同步新闻浏览量。。。。。结束。。。。。。。>
+2017-01-23 09:44:33,000 INFO [com.cqliving.cloud.scheduler.task.impl.ManuscriptInfoTask] - <同步新闻浏览量开始。。。。。。。。。。。。>
+2017-01-23 09:44:33,003 INFO [com.cqliving.cloud.scheduler.task.impl.ManuscriptInfoTask] - <同步新闻浏览量。。。。。结束。。。。。。。>
+2017-01-23 09:44:34,001 INFO [com.cqliving.cloud.scheduler.task.impl.ManuscriptInfoTask] - <同步新闻浏览量开始。。。。。。。。。。。。>
+2017-01-23 09:44:34,005 INFO [com.cqliving.cloud.scheduler.task.impl.ManuscriptInfoTask] - <同步新闻浏览量。。。。。结束。。。。。。。>
+2017-01-23 09:44:35,005 INFO [com.cqliving.cloud.scheduler.task.impl.ManuscriptInfoTask] - <同步新闻浏览量开始。。。。。。。。。。。。>
+2017-01-23 09:44:35,008 INFO [com.cqliving.cloud.scheduler.task.impl.ManuscriptInfoTask] - <同步新闻浏览量。。。。。结束。。。。。。。>
+2017-01-23 09:44:36,000 INFO [com.cqliving.cloud.scheduler.task.impl.ManuscriptInfoTask] - <同步新闻浏览量开始。。。。。。。。。。。。>
+2017-01-23 09:44:36,004 INFO [com.cqliving.cloud.scheduler.task.impl.ManuscriptInfoTask] - <同步新闻浏览量。。。。。结束。。。。。。。>
+2017-01-23 09:44:37,001 INFO [com.cqliving.cloud.scheduler.task.impl.ManuscriptInfoTask] - <同步新闻浏览量开始。。。。。。。。。。。。>
+2017-01-23 09:44:37,005 INFO [com.cqliving.cloud.scheduler.task.impl.ManuscriptInfoTask] - <同步新闻浏览量。。。。。结束。。。。。。。>

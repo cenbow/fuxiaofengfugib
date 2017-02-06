@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+	version="2.0">
+
+	<description>framework imgrpdiv tags</description>
+	<tlib-version>3.0</tlib-version>
+	<short-name>imgrp</short-name>
+	<uri>imgtagreplace</uri>
+
+	<tag>
+		<name>img</name>
+		<tag-class>com.cqliving.cloud.web.common.tag.ImgReplaceDivTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>content</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>appName</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>replace</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+</taglib>

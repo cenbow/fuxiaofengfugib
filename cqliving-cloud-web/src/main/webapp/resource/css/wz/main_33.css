@@ -1,0 +1,18 @@
+@charset "utf-8";
+/*九龙坡 */
+@font-face { 
+font-family:"FZBWKSJW";
+src:url(fonts/FZBWKSJW.ttf)
+} 
+body{ font-family:"FZBWKSJW"; font-size:110%; color:#000;}
+#header{ background:#444;}
+#nav ul li.active{ color:#843900;}
+#create{ background:url(../../images/wz/create_jlp.png) no-repeat center; background-size:100%;}
+#index .btn_back{ display:none;}
+#header .head_search{ width:60%; top:0; left:2%;}
+#nav{ font-size:1.3em;}
+.edit_comment .edit_content textarea,#search_text,.add_text input,.add_pic .add_memo textarea,.add_footer button.btn_add_complete{font-family:"FZBWKSJW";}
+.add_footer button.btn_add_complete,#comment_tab ul li.active a{ background:#843900;}
+#nav_mine ul li.active a,#comment_tab ul li a{ color:#843900;}
+#comment_tab ul{ border:1px solid #843900;}
+

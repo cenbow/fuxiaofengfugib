@@ -1,0 +1,11 @@
+@charset "utf-8";
+/*垫江 */
+#header{ background:#444;}
+#nav ul li.active{ color:#d33d3c;}
+#index .btn_back{ display:none;}
+#create{ background:url(../../images/wz/create_dj.png) no-repeat center; background-size:100%;}
+#header .head_search{ width:60%; top:0; left:2%;}
+.add_footer button.btn_add_complete,#comment_tab ul li.active a{ background:#d33d3c;}
+#nav_mine ul li.active a,#comment_tab ul li a{ color:#d33d3c;}
+#comment_tab ul{ border:1px solid #d33d3c;}
+

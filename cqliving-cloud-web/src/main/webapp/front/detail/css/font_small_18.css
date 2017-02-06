@@ -1,0 +1,6 @@
+@charset "utf-8";
+/* CSS Document */
+.detail_title{ font-size:2em;}
+.detail_info,.topic_list_content .content_info{ font-size:1.1em;}
+.detail_content,.activity_title,.topic_list_content .content_title,.topic_nav{ font-size:1.6em;}
+.topic_memo{ font-size:1.5em;}

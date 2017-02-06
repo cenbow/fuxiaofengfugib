@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+	version="2.0">
+
+	<description>framework app tags</description>
+	<tlib-version>3.0</tlib-version>
+	<short-name>apptag</short-name>
+	<uri>myapptag</uri>
+
+	<tag>
+		<name>app</name>
+		<tag-class>com.cqliving.cloud.web.common.tag.AppTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>appId</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+</taglib>

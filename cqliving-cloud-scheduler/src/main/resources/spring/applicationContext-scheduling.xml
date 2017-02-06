@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.1.xsd
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+	<description>定时任务配置</description>
+	<!-- 工作任务线程池配置 -->
+	<!-- <bean id="threadPool1" class="com.cqliving.cloud.scheduler.thread.ThreadPool">
+		<constructor-arg index="0" value="2" />
+		<constructor-arg index="1" value="3" />
+		<constructor-arg index="2" value="0" />
+		<constructor-arg index="3" value="100" />
+	</bean>
+	
+	<bean id="threadPool2" class="com.cqliving.cloud.scheduler.thread.ThreadPool">
+		<constructor-arg index="0" value="2" />
+		<constructor-arg index="1" value="3" />
+		<constructor-arg index="2" value="0" />
+		<constructor-arg index="3" value="300" />
+	</bean>
+	
+	七牛同步上传
+	<task:scheduler id="syncFileScheduler" pool-size="1" />
+	<task:scheduled-tasks scheduler="syncFileScheduler">
+		<task:scheduled ref="syncFileTask" method="execute" cron="0 0/1 * * * ?" />
+	</task:scheduled-tasks>
+	
+	天气预报同步
+	<task:scheduler id="weatherScheduler" pool-size="1" />
+	<task:scheduled-tasks scheduler="weatherScheduler">
+		获取天气预报同步，每6个小时同步一次
+		<task:scheduled ref="weatherTask" method="execute" cron="5 0 0/6 * * ?" />
+	</task:scheduled-tasks>
+	
+	七牛转码状态同步
+	<task:scheduler id="qiniutransCodingTask" pool-size="1" />
+	<task:scheduled-tasks scheduler="qiniutransCodingTask">
+		<task:scheduled ref="transCodingTask" method="execute" cron="*/30 * * * * ?" />
+	</task:scheduled-tasks>
+	
+	编辑考核数据统计
+	<task:scheduler id="statisticsScheduler" pool-size="1" />
+	<task:scheduled-tasks scheduler="statisticsScheduler">
+		编辑考核数据统计，每天凌晨3点跑一次昨天的数据
+		<task:scheduled ref="statisticsTask" method="execute" cron="15 0 3 * * ?" />
+	</task:scheduled-tasks>
+	
+    重庆app抓稿
+	<task:scheduler id="manuscriptInfoScheduler" pool-size="1"/>
+	<task:scheduled-tasks scheduler="manuscriptInfoScheduler">
+		<task:scheduled ref="manuscriptInfoTask" method="execute" cron="35 */5 * * * ?"/>
+	</task:scheduled-tasks> -->
+	
+	<!-- 新闻趋势统计 -->
+	<!-- <task:scheduler id="statisticsScheduler" pool-size="1"/>
+	<task:scheduled-tasks scheduler="statisticsScheduler">
+		<task:scheduled ref="statisticsNewsTask" method="execute" cron="59 59 * * * ?"/>
+	</task:scheduled-tasks> -->
+	
+	<!-- 新闻栏目趋势统计 -->
+	<!-- <task:scheduler id="statisticsAppColumnsScheduler" pool-size="1"/>
+	<task:scheduled-tasks scheduler="statisticsAppColumnsScheduler">
+		<task:scheduled ref="statisticsAppColumnsTask" method="execute" cron="59 59 23 * * ?"/>
+	</task:scheduled-tasks> -->
+	
+	<!-- 新闻浏览量缓存同步 0 3 0 */2 * ? -->
+	<task:scheduler id="syncViewCountScheduler" pool-size="1"/>
+	<task:scheduled-tasks scheduler="syncViewCountScheduler">
+		<task:scheduled ref="syncViewCountTask" method="execute" cron="0 * * * * ?"/>
+	</task:scheduled-tasks>
+	
+	<!-- 订单过期任务  每两个小时执行一次-->
+	<!-- <task:scheduler id="orderExpiredTaskScheduler" pool-size="1"/>
+	<task:scheduled-tasks scheduler="orderExpiredTaskScheduler">
+		<task:scheduled ref="orderExpiredTask" method="execute" cron="20 * */2 * * ?"/>
+	</task:scheduled-tasks>
+	
+	城口App抓稿 每十分钟抓稿一次
+	<task:scheduler id="chengKouManuscriptScheduler" pool-size="1"/>
+	<task:scheduled-tasks scheduler="chengKouManuscriptScheduler">
+		<task:scheduled ref="chengKouManuscriptTask" method="execute" cron="40 */10 * * * ?"/>
+	</task:scheduled-tasks>
+	
+	秀山App抓稿 每十分钟抓稿一次
+	<task:scheduler id="xiuShanManuscriptScheduler" pool-size="1"/>
+	<task:scheduled-tasks scheduler="xiuShanManuscriptScheduler">
+		<task:scheduled ref="xiuShanManuscriptTask" method="execute" cron="30 */10 * * * ?"/>
+	</task:scheduled-tasks> -->
+	
+	<!-- 同步获取区县和区县楼盘信息，每天凌晨3点执行 -->
+	<!-- <task:scheduler id="countyHousesScheduler" pool-size="1"/>
+	<task:scheduled-tasks scheduler="countyHousesScheduler">
+		<task:scheduled ref="countyHousesTask" method="execute" cron="0 0 3 ? * *"/>
+	</task:scheduled-tasks> -->
+</beans>

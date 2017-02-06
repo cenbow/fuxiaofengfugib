@@ -1,0 +1,51 @@
+@charset "utf-8";
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+html {
+	font-size: 62.75%;
+	-webkit-text-size-adjust: none;
+}
+body {
+	font-family: "微软雅黑", Arial;
+	line-height: 1.6em;
+	color: #333;
+	background: #fff;
+}
+img {
+	border: none
+}
+ol, ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+a {
+	text-decoration: none;
+}
+.wrap {
+	width: 450px;
+	margin: 0 auto;
+	text-align: center;
+}
+.err_info {
+	font-size: 20px;
+	color: #aeadae;
+	border-bottom: 1px solid #ddd;
+	height: 60px;
+	line-height: 60px;
+	margin-top: 60px;
+}
+.err_title {
+	font-size: 100px;
+	color: #3d3c3d;
+	margin: 80px 0;
+	font-weight: bold;
+}
+.err_memo {
+	font-size: 20px;
+	color: #545454;
+	margin-bottom: 60px;
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!-- 	<context:property-placeholder location="classpath:config/common.properties" /> -->
+	<context:property-placeholder ignore-resource-not-found="true" location="classpath:/application.development.properties" />
+	<context:component-scan base-package="com.cqliving.redis">
+		<context:exclude-filter type="annotation"
+			expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+	
+	<!-- 非集群客户端,注意:id=defaultRedisClient和id=clusterRedisClient的bean只能存在一个,add by yuwu 20160620 -->
+	<bean id="defaultRedisClient" class="com.cqliving.redis.redis.client.DefaultRedisClient"></bean> 
+	<bean id="jedisPool" class="redis.clients.jedis.JedisPool">
+		<constructor-arg index="0" ref="jedisPoolConfig" />
+		<constructor-arg index="1" value="${redis.master.host}" />
+		<constructor-arg index="2" value="${redis.master.port}" />
+		<constructor-arg index="3" value="${redis.default.timeout}" />
+	</bean>
+	
+	<!-- 集群,注意:id=defaultRedisClient和id=clusterRedisClient的bean只能存在一个,如果使用集群，请配置下面的集群IP和端口,add by yuwu 20160620 -->
+	<!-- <bean id="clusterRedisClient" class="com.cqliving.redis.redis.client.ClusterRedisClient"></bean>
+	<bean id="jedisCluster" class="redis.clients.jedis.JedisCluster">
+		<constructor-arg name="poolConfig" ref="jedisPoolConfig" />
+		<constructor-arg name="nodes">
+			<set>
+				<bean class="redis.clients.jedis.HostAndPort">
+					<constructor-arg name="host" value="127.0.0.1"></constructor-arg>
+					<constructor-arg name="port" value="7001"></constructor-arg>
+				</bean>
+				<bean class="redis.clients.jedis.HostAndPort">
+					<constructor-arg name="host" value="127.0.0.1"></constructor-arg>
+					<constructor-arg name="port" value="7002"></constructor-arg>
+				</bean>
+				<bean class="redis.clients.jedis.HostAndPort">
+					<constructor-arg name="host" value="127.0.0.1"></constructor-arg>
+					<constructor-arg name="port" value="7003"></constructor-arg>
+				</bean>
+				<bean class="redis.clients.jedis.HostAndPort">
+					<constructor-arg name="host" value="127.0.0.1"></constructor-arg>
+					<constructor-arg name="port" value="7004"></constructor-arg>
+				</bean>
+				<bean class="redis.clients.jedis.HostAndPort">
+					<constructor-arg name="host" value="127.0.0.1"></constructor-arg>
+					<constructor-arg name="port" value="7005"></constructor-arg>
+				</bean>
+				<bean class="redis.clients.jedis.HostAndPort">
+					<constructor-arg name="host" value="127.0.0.1"></constructor-arg>
+					<constructor-arg name="port" value="7006"></constructor-arg>
+				</bean>
+			</set>
+		</constructor-arg>
+	</bean> -->
+	
+	<bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+		<property name="maxTotal" value="20" /><!-- 最大连接数, 默认8个 -->
+		<property name="maxIdle" value="8" /><!-- 最大空闲连接数, 默认8个 -->
+		<property name="maxWaitMillis" value="1500" /><!-- 获取连接时的最大等待毫秒数(如果设置为阻塞时BlockWhenExhausted),如果超时就抛异常, 小于零:阻塞不确定的时间,  默认-1 -->
+		<property name="numTestsPerEvictionRun" value="3" /><!-- 每次逐出检查时 逐出的最大数目 如果为负数就是 : 1/abs(n), 默认3 -->
+		<property name="minEvictableIdleTimeMillis" value="-1" /><!-- 逐出连接的最小空闲时间 默认60000毫秒(1分钟) -->
+		<property name="timeBetweenEvictionRunsMillis" value="30000" /><!-- 逐出扫描的时间间隔(毫秒) 如果为负数,则不运行逐出线程, 默认-1 -->
+		<property name="softMinEvictableIdleTimeMillis" value="10000" /><!--  -->
+		<property name="testOnBorrow" value="true" /><!-- 在获取连接的时候检查有效性, 默认false -->
+		<property name="testWhileIdle" value="true" /><!-- 在空闲时检查有效性, 默认false -->
+		<property name="testOnReturn" value="false" /><!--  -->
+		<property name="blockWhenExhausted" value="false" /><!-- 连接耗尽时是否阻塞, false报异常,ture阻塞直到超时, 默认true -->
+	</bean>
+</beans>

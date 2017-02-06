@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* 九龙坡 */
+
+@font-face { 
+font-family:"FZBWKSJW";
+src:url(fonts/FZBWKSJW.ttf)
+} 
+body{ font-family:"FZBWKSJW"; font-size:110%; color:#000;}
+/*话题*/
+.topic_share .detail_title{ text-align:center; border-bottom:1px solid #ddd;}
+.topic_share .detail_content p a{ text-align:right; float:right; color:#843900}
+/*专题*/
+.topic_memo a{color:#843900}
+.topic_nav ul li.active a{color:#843900; border-bottom-color:#843900;}
+.detail_info span{margin-right:0;}
+.detail_info_right{padding-left:2.5em;}
+.vote_top .vote_total p label,.survey_vote_info .vote_num,.vote_top .vote_total span{ font-family:"微软雅黑";}
+

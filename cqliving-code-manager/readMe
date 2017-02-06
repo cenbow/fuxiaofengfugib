@@ -1,0 +1,20 @@
+代码生成的入口程序
+com.cqliving.codegenerator2.ui.Generator 运行main 方法即可
+
+service, dao, domain 生成
+根据cqliving-framework 的规范，每张表生成相应的service,dao和domain
+domain的主键为long，如果是oracle 默认使用 hibernate_sequence 主键，
+如果是mysql使用id自增长，也可自行修改模板更改主键生成规则。
+
+JSP 生成
+主要生成 增加、修改、查看和列表 功能，可以在生成界面指定相应字段，不指定为所有。
+为以上功能生成了 list.jsp, detail.jsp和view.jsp页面，
+生成界面可制定jsp前缀，例：指点前缀为  user_ 那么生成的jsp文件为 user_list.jsp, user_detail.jsp和user_view.jsp
+
+controller 生成
+针对功能生成了相应的 方法和requestMapping
+为方便权限控制， 增加和修改分别生成了2个方法，一个为get请求，一个为post请求，get为查看，post为写库，
+这样 进入增加页和增加都是使用的同一url， 修改也是同理。
+
+tiles 模板
+生成器为定义tiles 模板的生成，请开发者根据需要自行增加和配置tiles
