@@ -1,0 +1,27 @@
+/* pages/districts/districts.wxss */
+.district{
+    padding: 0 32rpx;
+}
+.district navigator{
+    border-bottom: 2rpx solid #ddd;
+    padding: 32rpx 0;
+}
+.district .logo{
+    width: 80rpx;
+    height: 80rpx;
+    padding-right: 32rpx;
+}
+.district .read{
+    font-size: 30rpx;
+    color: #dd1717;
+    padding: 10rpx;
+    border: 2rpx solid #dd1717;
+    border-radius: 30rpx;
+    float: right;
+}
+.district text{
+    vertical-align: 26rpx;
+}
+.district .read{
+    margin-top: 12rpx;
+}

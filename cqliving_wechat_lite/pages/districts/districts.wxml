@@ -1,0 +1,10 @@
+<!--pages/districts/districts.wxml 区县联盟-->
+<view class="district" onPullDownRefresh="onPullDownRefresh" onReachBottom="onReachBottom">
+<block wx:for="{{dataList}}">
+    <navigator url="../district/district?aid={{item.appId}}&cid={{item.columnsId}}&tt={{item.appName}}"><image class="logo" src="{{item.appIcon}}"></image><text>{{item.appName}}</text><span class="read">阅读</span></navigator>
+</block>
+</view>
+<view class="loading_view {{loadingViewDisplay}}">
+  <image src="../../image/load.gif"></image>
+  <text>加载中...</text>
+</view>

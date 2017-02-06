@@ -1,0 +1,5 @@
+/* pages/news_list/news_list.wxss */
+.swiper-item{
+  display: block;
+  height: 150px;
+}

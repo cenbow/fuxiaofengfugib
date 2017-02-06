@@ -1,0 +1,102 @@
+
+<!--pages/district/district.wxml-->
+<view class="news_list {{currentTab==0 ? 'show' : 'hidden'}}">
+  <!-- 轮播 -->
+  <!--<view class="section section_gap swiper">
+    <swiper style="height:{{appGlobalData.carouselHeight}}rem" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item.background}}" class="swiper-img" width="100%" height="150" />
+          <text class="swiper-text">{{item.test}}</text>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>-->
+  <view class="news" wx:for="{{news}}">
+    <!-- 1:单图 -->
+    <block wx:if="{{item.listViewType == 1}}">
+      <navigator url="../news_detail/news_detail?id={{item.id}}" class="topic_list">
+        <view style="height:{{appGlobalData.singleImgHeight}}rem" class="topic_list_pic">
+          <image src="{{item.images}}"></image>
+        </view>
+        <view class="topic_list_content" style="height:{{appGlobalData.singleContentHeight}}rem">
+          <view class="content_title">
+            <a href='#'>{{item.title}}</a> 
+          </view>
+          <view class="content_info">
+            <span class="topic_label" wx:if="{{item.infoLabel != null}}">{{item.infoLabel}}</span> 
+            <span class="view_span">{{item.viewCount}}</span> 
+            <span class="">{{item.onlineDate}}</span> 
+          </view>
+        </view>
+      </navigator>
+    </block>
+    <!-- 0:无图 -->
+    <block wx:elif="{{item.listViewType == 0}}">
+      <navigator url="../news_detail/news_detail?id={{item.id}}" class="topic_list">
+        <view class="topic_list_1" bindtap="getSystemInfo">
+          <view class="topic_list_content">
+            <view class="content_title">
+              <a href='#'>{{item.title}}</a> 
+            </view>
+            <view class="content_info">
+              <span class="topic_label" wx:if="{{item.infoLabel != null}}">{{item.infoLabel}}</span> 
+              <span class="view_span">{{item.viewCount}}</span> 
+              <span class="">{{item.onlineDate}}</span> 
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </block>
+    <!-- 2:大图 -->
+    <block wx:elif="{{item.listViewType == 2}}">
+      <navigator url="../news_detail/news_detail?id={{item.id}}" class="topic_list">
+        <view class="topic_list_1">
+          <view class="topic_list_content">
+            <view class="content_title">
+              <a href='#'>{{item.title}}</a> 
+            </view>
+            <view class="topic_list_bigpic" style="height:{{appGlobalData.bigImgHeight}}rem">
+              <image src="{{item.images}}"></image>
+            </view>
+            <view class="content_info">
+              <span class="topic_label" wx:if="{{item.infoLabel != null}}">{{item.infoLabel}}</span> 
+              <span class="view_span">{{item.viewCount}}</span> 
+              <span class="">{{item.onlineDate}}</span> 
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </block>
+    <!-- 3:多图 -->
+    <block wx:elif="{{item.listViewType == 3}}">
+      <navigator url="../news_detail/news_detail?id={{item.id}}" class="topic_list">
+        <view class="topic_list_1">
+          <view class="topic_list_content">
+            <view class="content_title">
+              <a href='#' target="_blank">{{item.title}}</a> 
+            </view>
+            <ul style="height:{{appGlobalData.multipleImgHeight}}rem">
+              <block wx:for="{{item.images}}" wx:for-item="obj">
+                <li>
+                  <a href="javascript:;">
+                    <image src="{{obj}}"></image>
+                  </a> 
+                </li>
+              </block>
+            </ul>
+            <view class="content_info">
+              <span class="topic_label" wx:if="{{item.infoLabel != null}}">{{item.infoLabel}}</span> 
+              <span class="view_span">{{item.viewCount}}</span> 
+              <span class="">{{item.onlineDate}}</span> 
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </block>
+  </view>
+</view>
+<view class="loading_view {{loadingViewDisplay}}">
+  <image src="../../image/load.gif"></image>
+  <text>加载中...</text>
+</view>

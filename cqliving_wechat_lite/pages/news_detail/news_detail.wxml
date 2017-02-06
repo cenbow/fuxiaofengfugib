@@ -1,0 +1,104 @@
+
+<!--pages/news_detail/news_picture.wxml-->
+<import src="../../utils/wxParse/wxParse.wxml"/>
+<view id="detail">
+  <view class="detail_title">
+    <template is="wxParse" data="{{wxParseData:title.nodes}}"/>
+  </view>
+  <view class="detail_info"><span>{{source}}</span>{{pubDate}}<span class="detail_info_right">浏览量 {{viewCount}}</span></view>
+
+<!-- 视频模板 -->
+<template name="videoTmp">
+    <video objectFit="fill" src="{{item.fileUrl}}" controls="true"></video>
+</template>
+<template name="videoTmps">
+    <view class="detail_video" wx:for="{{resourceList}}">
+      <template is="videoTmp" data="{{item}}"></template>
+    </view>
+</template>
+<!-- 音频模板 -->
+<template name="audioTmp">
+    <audio src="{{item.fileUrl}}" controls="controls" class="audioControl"></audio>
+</template>
+<template name="audioTmps">
+    <view class="detail_audio" wx:for="{{resourceList}}">
+      <template is="audioTmp" data="{{item}}"></template>
+    </view>
+</template>
+<!-- 多图模板 -->
+<template name="imageTmp">
+    <image src="{{item.fileUrl}}" mode="widthFix" bindload="wxParseImgLoad" bindtap="wxParseImgTap" data-src="{{item.fileUrl}}" data-idx="{{index}}"></image>
+    <p>{{item.description}}</p>
+</template>
+<template name="imageTmps">
+    <block wx:for="{{resourceList}}">
+        <template is="imageTmp" data="{{item}}"></template>
+    </block>
+</template>
+
+  <!--内容-->
+  <view class="detail_content"> 
+     <!--视频-->
+    <block wx:if="{{contextType == 5}}">
+        <template is="videoTmps" data="{{resourceList}}"></template>
+    </block>
+    <!-- 音频 -->
+    <block wx:elif="{{contextType == 4}}">
+        <template is="audioTmps" data="{{resourceList}}"></template>
+    </block>
+    <!-- 多图 -->
+    <block wx:elif="{{contextType == 1}}">
+        <template is="imageTmps" data="{{resourceList}}"></template>
+    </block>
+    <!-- 原创 -->
+    <block wx:elif="{{contextType == 2}}">
+        <block wx:for="{{resourceList}}">
+            <block wx:if="{{item.type == 6}}"><!-- 原创多图 -->
+                <template is="imageTmp" data="{{item}}"></template>
+            </block>
+            <block wx:elif="{{item.type == 2}}"><!-- 原创音频 -->
+                <template is="audioTmp" data="{{item}}"></template>
+            </block>
+            <block wx:elif="{{item.type == 1}}"><!-- 原创视频 -->
+                <template is="videoTmp" data="{{item}}"></template>
+            </block>
+            <block wx:else><!-- 原创普通文本 -->
+                <block wx:for="{{tmpContents}}" wx:for-item="tmp">
+                  <block wx:if="{{tmp.id == item.id}}">
+                      <template is="wxParse" data="{{wxParseData:tmp.data.nodes}}"/>
+                  </block>
+                </block>
+            </block>
+        </block>
+    </block>
+    <!-- 图文模式-->
+    <block wx:else>
+      <view class="wxParse">
+          <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+      </view>
+    </block>
+
+
+
+
+    
+    <!--视频-->
+    <!--<view class="detail_video">
+      <video src="http://7xkrlu.com1.z0.glb.clouddn.com/video1.mp4 " controls="controls"></video>
+    </view>-->
+
+    <!--音频-->
+    <!--<view class="detail_audio">
+      <audio src="#" controls="controls" class="audioControl"></audio>
+    </view>-->
+
+    <!--图片占位-->
+    <!--<image src="http://222.180.239.90:38084/images/app_1/cms/201612/2ab1f35ad754474d98dca550e68b19ae.JPG"></image>
+    <p> 廊桥横卧廊桥横卧廊桥横卧廊桥横卧廊桥横卧廊桥横卧</p>
+    <image src="../../image/testpic.jpg"></image>-->
+
+
+
+  </view>
+  <view class="detail_line"></view>
+</view>

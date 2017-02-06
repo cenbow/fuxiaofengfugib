@@ -1,0 +1,98 @@
+<!-- 0:无图 -->
+<template name="listViewType0">
+  <navigator url="../news_detail/news_detail?id={{item.id}}" class="topic_list">
+    <view class="topic_list_1" bindtap="getSystemInfo">
+      <view class="topic_list_content">
+        <view class="content_title">
+          <a href='#'>{{item.title}}</a> 
+        </view>
+        <view class="content_info">
+          <span class="topic_label" wx:if="{{item.infoLabel != null}}">{{item.infoLabel}}</span> 
+          <span class="view_span">{{item.viewCount}}</span> 
+          <span class="news_time">{{item.onlineDate}}</span> 
+        </view>
+      </view>
+    </view>
+  </navigator>
+</template>
+<!-- 1:单图 -->
+<template name="listViewType1">
+  <navigator url="../news_detail/news_detail?id={{item.id}}" class="topic_list">
+    <view style="height:{{singleImgHeight}}rem" class="topic_list_pic">
+      <image src="{{item.images}}"></image>
+    </view>
+    <view class="topic_list_content" style="height:{{singleContentHeight}}rem">
+      <view class="content_title">
+        <a href='#'>{{item.title}}</a> 
+      </view>
+      <view class="content_info">
+        <span class="topic_label" wx:if="{{item.infoLabel != null}}">{{item.infoLabel}}</span> 
+        <span class="view_span">{{item.viewCount}}</span> 
+        <span class="news_time">{{item.onlineDate}}</span> 
+      </view>
+    </view>
+  </navigator>
+</template>
+<!-- 2:大图 -->
+<template name="listViewType2">
+  <navigator url="../news_detail/news_detail?id={{item.id}}" class="topic_list">
+    <view class="topic_list_1">
+      <view class="topic_list_content">
+        <view class="content_title">
+          <a href='#'>{{item.title}}</a> 
+        </view>
+        <view class="topic_list_bigpic" style="height:{{bigImgHeight}}rem">
+          <image src="{{item.images}}"></image>
+        </view>
+        <view class="content_info">
+          <span class="topic_label" wx:if="{{item.infoLabel != null}}">{{item.infoLabel}}</span> 
+          <span class="view_span">{{item.viewCount}}</span> 
+          <span class="news_time">{{item.onlineDate}}</span> 
+        </view>
+      </view>
+    </view>
+  </navigator>
+</template>
+<!-- 3:多图 -->
+<template name="listViewType3">
+  <navigator url="../news_detail/news_detail?id={{item.id}}" class="topic_list">
+    <view class="topic_list_1">
+      <view class="topic_list_content">
+        <view class="content_title">
+          <a href='#' target="_blank">{{item.title}}</a> 
+        </view>
+        <ul style="height:{{multipleImgHeight}}rem">
+          <block wx:for="{{item.images}}" wx:for-item="obj">
+            <li>
+              <a href="javascript:;">
+                <image src="{{obj}}"></image>
+              </a> 
+            </li>
+          </block>
+        </ul>
+        <view class="content_info">
+          <span class="topic_label" wx:if="{{item.infoLabel != null}}">{{item.infoLabel}}</span> 
+          <span class="view_span">{{item.viewCount}}</span> 
+          <span class="news_time">{{item.onlineDate}}</span> 
+        </view>
+      </view>
+    </view>
+  </navigator>
+</template>
+
+<!-- 视频新闻列表模板 -->
+<template name="videoList">
+  <navigator class="video_list" url="../news_detail/news_detail?id={{id}}">
+    <view class="picture" style="height:{{videoImgHeight}}rem">
+      <image class="mask" src="http://images.cqliving.com/wx/xiaochengxu/video_mask.png"></image>
+      <image src="{{images}}"></image>
+    </view>
+    <view class="inner_content">
+      <text>{{title}}</text>
+      <view class="content_info">
+        <span class="time_span">{{onlineDate}}</span> 
+        <span class="view_span">{{viewCount}}</span> 
+      </view>
+    </view>
+  </navigator>
+</template>

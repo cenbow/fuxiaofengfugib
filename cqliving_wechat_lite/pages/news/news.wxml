@@ -1,0 +1,49 @@
+<import src="../news_list/news_list.wxml"/>
+ <!-- 导航 -->
+<scroll-view class="tab" scroll-x="true">
+  <block wx:for="{{tabNav.items}}">
+    <view bindtap="newsActive" data-col-id="{{item.columnId}}" data-idx="{{item.idx}}" data-carousel="{{item.isCarousel}}" class="swiper-tab-list {{currentTab == item.idx ? on : ''}}">
+      <image src="{{currentTab == item.idx ? item.src : item.select}}"></image>
+      <image class="selected {{currentTab == item.idx ? 'show' : 'hidden'}}" src="http://images.cqliving.com/wx/xiaochengxu/selected.png"></image>
+    </view>
+  </block>
+</scroll-view>
+ <!-- 内容 -->
+<view class="with_tab">
+    <!-- 渲染轮播 有才会渲染 -->
+    <block wx:for="{{dataCarouselList}}" wx:for-item="objItem" wx:for-index="objIndex" wx:if="{{isCarousel}}">
+        <block wx:if="{{objIndex == currentTab}}">
+            <view class="section section_gap swiper">
+              <swiper style="height:{{appGlobalData.carouselHeight}}rem" indicator-dots="{{swiper.indicatorDots}}" autoplay="{{swiper.autoplay}}" interval="{{swiper.interval}}" duration="{{swiper.duration}}">
+                <block wx:for="{{objItem.data}}" wx:for-index="idx">
+                  <swiper-item data-id="{{item.id}}" bindtap="newsDetail">
+                    <image src="{{item.images}}" class="slide-image" width="100%" height="150" />
+                    <text class="swiper-text">{{item.title}}</text>
+                    <text class="pageIndex">{{idx + 1}}/{{objItem.len}}</text>
+                  </swiper-item>
+                </block>
+              </swiper>
+            </view>
+        </block>
+    </block>
+    <!-- 渲染列表 -->
+    <block wx:for="{{dataNewsList}}" wx:for-item="objItem" wx:for-index="objIndex">
+        <block wx:if="{{objIndex == currentTab}}">
+            <block wx:if="{{currentTab == 2}}">
+                <block wx:for="{{objItem}}">
+                  <template is="videoList" data="{{...item, ...appGlobalData}}"></template>
+                </block>
+            </block>
+            <block wx:else>
+                <view class="news" wx:for="{{objItem}}">
+                    <template is="listViewType{{item.listViewType}}" data="{{item, ...appGlobalData}}"></template>
+                </view>
+            </block>
+            
+        </block>
+    </block>
+</view>
+<view class="loading_view {{loadingViewDisplay}}">
+  <image src="../../image/load.gif"></image>
+  <text>加载中...</text>
+</view>
