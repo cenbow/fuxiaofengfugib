@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/jquery.bigautocomplete.css" type="text/css" />
+<title>jQuery实现仿搜索引擎文本框自动补全自动完成插件 - JS代码网</title>
+<meta name="author" content="JS代码网" />
+<meta name="keywords" content="JS代码,JS特效代码,jQuery自动补全插件,JS自动完成,JS自动补全,jQuery自动完成,jQuery自动提示" />
+<meta name="description" content="非常实用常见的jQuery自动完成补全插件,兼容各种浏览器值得下载" />
+<!--JS代码网顶部CSS-->
+<link href="http://www.js-css.cn/jscode/jscode.css" rel="stylesheet" />
+<!--JS代码网顶部CSS-->
+<style type="text/css">
+*{margin:0px;font-size:12px;}
+</style>
+
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.bigautocomplete.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			
+			$("#tt").bigAutocomplete({width:604,data:[{title:"中国好声音",result:{ff:"qq"}},{title:"中国移动网上营业厅"},{title:"中国银行"},{title:"中国移动"},{title:"中国好声音第三期"},{title:"中国好声音 第一期"},{title:"中国电信网上营业厅"},{title:"中国工商银行"},{title:"中国好声音第二期"},{title:"中国地图"}],callback:function(data){
+				alert(data.title);
+				
+			}});
+			
+		
+		})
+	</script>
+
+</head>
+<body>
+<!--JS代码网头部-->
+<div class="back" style="margin-bottom:20px;"> 
+  <div class="pl10">
+    <ul class="ulcls">
+	<li class="logowidth">
+	<a href="http://www.js-css.cn" title="JS代码网"><img src="http://www.js-css.cn/images/toplogo.png" border="0"/></a>	
+	</li>
+	<li style="width:800px;">
+	<div class="menupos">
+	<ul style="list-style:none;">
+	<li class="firstli"><a href="http://www.js-css.cn" class="lia">首页</a></li>
+	<li class="sencli"><a href="http://www.js-css.cn/a/jscode/" class="lia">JS代码大全</a></li>
+	<li class="threeli"><a href="http://www.js-css.cn/a/openframe/jqueryapi/" class="lia">jQuery 插件</a></li>
+	<li class="threeli"><a href="http://www.js-css.cn/a/css/" class="lia">DIV+CSS</a></li>
+	<li class="threeli"><a href="http://www.js-css.cn/a/html5/" class="lia">HTML5+CSS3</a></li>
+	<li class="threeli"><a href="http://www.js-css.cn/a/openframe/" class="lia">开源项目</a></li>
+	<li class="threeli"><a href="http://www.js-css.cn/a/tools/" class="lia">资源工具</a></li>	
+	</ul>
+	</div>
+	</li>     
+    </ul>
+  </div>
+  <div class="textpos">整理：<a href="http://www.js-css.cn" class="texta">JS代码网</a><br>来源：<a href="#" class="texta">互联网</a> <br>本站QQ交流学习群：<a href="#" class="texta">281362453</a> <br> 赞助网店：<a href="http://wuhaodian.taobao.com" class="texta">http://wuhaodian.taobao.com</a></div>
+</div>
+<!--JS代码网头部-->
+<br /><br /><br />
+<center>
+	自定义下拉框宽度，列表为：中国好声音、中国移动网上营业厅、中国银行、中国移动、中国好声音第三期、中国好声音 第一期、中国电信网上营业厅、中国工商银行、中国好声音第二期、中国地图
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<input type="text" id="tt" style="width:600px;height:30px; line-height:30px;font-size:15px; border:2px #CCCCCC solid;" />		
+</center>	
+</body>
+</html>

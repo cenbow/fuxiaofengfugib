@@ -1,0 +1,123 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ include file="/WEB-INF/jsp/common/taglibs.jsp"%>
+
+<div class="col-xs-12">
+	<div id="sample-table-2_wrapper" class="dataTables_wrapper" role="grid">
+		<div class="table-responsive">
+			<table id="sample-table-2" class="table table-striped table-bordered table-hover dataTable">
+				<thead>
+                    <tr>
+                    	<th class="center">
+							<label>
+								<input type="checkbox" class="ace" />
+								<span class="lbl"></span>
+							</label>
+						</th>
+                		<th>内容</th>
+                		<th>状态</th>
+                		<th>点赞量</th>
+                		<th>点踩量</th>
+                		<th>评论量</th>
+                		<th>上线时间</th>
+                		<th>创建时间</th>
+                		<th>创建人</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+				<tbody>
+				<c:forEach items="${pageInfo.pageResults}" var="item">
+                    <tr>
+                    	<td class="center" id="${item.id}">
+							<label>
+								<input type="checkbox" class="ace" id="${item.id}"/>
+								<span class="lbl"></span>
+							</label>
+						</td>
+                    	<td title="${item.content}">${myfn:cutString(item.content, 50)}</td>
+                        <td>
+                        	<c:choose>
+								<c:when test="${item.status eq -1 or item.status eq 88}">
+		                        	<span class="label label-danger">${allStatuss[item.status]}</span>
+								</c:when>
+								<c:when test="${item.status eq 1}">
+		                        	<span class="label label-warning">${allStatuss[item.status]}</span>
+								</c:when>
+								<c:when test="${item.status eq 3}">
+		                        	<span class="label label-success">${allStatuss[item.status]}</span>
+								</c:when>
+								<c:otherwise>
+		                        	<span class="label label-info">${allStatuss[item.status]}</span>
+								</c:otherwise>
+                        	</c:choose>
+                        </td>
+                		<td>${item.praiseCount}</td>
+                		<td>${item.despiseCount}</td>
+                		<td>${item.replyCount}</td>
+                    	<td><fmt:formatDate value="${item.onlineTime}" pattern="yyyy-MM-dd HH:mm" /></td>
+                    	<td><fmt:formatDate value="${item.createTime}" pattern="yyyy-MM-dd HH:mm" /></td>
+                    	<td>${item.creator}</td>
+                        <td>
+                            <div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+                        	<cqliving-security2:hasPermission name="/module/joke/joke_info_view.html">
+								<a class="blue" data-toggle="modal" href="joke_info_view.html?id=${item.id }" data-rel="tooltip" data-original-title="查看" data-placement="top">
+									<i class="icon-search bigger-130"></i>
+								</a>
+                            </cqliving-security2:hasPermission>
+							<cqliving-security2:hasPermission name="/module/joke/joke_info_update.html">
+								<a class="blue" data-toggle="modal" href="joke_info_update.html?id=${item.id }" data-rel="tooltip" data-original-title="修改" data-placement="top">
+									<i class="icon-pencil bigger-130"></i>
+								</a>
+                            </cqliving-security2:hasPermission>
+							<cqliving-security2:hasPermission name="/module/joke/joke_info_delete.html">
+								<a class="red" href="javascript:void(0);" data-rel="tooltip" id="deleteButton" url="joke_info_delete.html?id=${item.id }" data-original-title="删除" data-placement="top">
+									<i class="icon-trash bigger-130"></i>
+								</a>
+                            </cqliving-security2:hasPermission>
+	                            <%--
+	                            <a class="blue" data-toggle="modal" href="javascript:;" data-rel="tooltip" data-original-title="锁定/设置密码" data-placement="top">
+									<i class="icon-lock bigger-130"></i>
+								</a>
+								<a class="blue" data-toggle="modal" href="javascript:;" data-rel="tooltip" data-original-title="复制" data-placement="top">
+									<i class="icon-copy bigger-130"></i>
+								</a>
+								<a class="blue" data-toggle="modal" href="javascript:;" data-rel="tooltip" data-original-title="用户群/群组" data-placement="top">
+									<i class="icon-group bigger-130"></i>
+								</a>
+								<a class="blue" data-toggle="modal" href="javascript:;" data-rel="tooltip" data-original-title="用户/账户/账号" data-placement="top">
+									<i class="icon-user bigger-130"></i>
+								</a>
+								<a class="blue" data-toggle="modal" href="javascript:;" data-rel="tooltip" data-original-title="新增/添加" data-placement="top">
+									<i class="icon-plus bigger-130"></i>
+								</a>
+								<a class="blue" data-toggle="modal" href="javascript:;" data-rel="tooltip" data-original-title="相关" data-placement="top">
+									<i class="icon-link bigger-130"></i>
+								</a>
+								<a class="blue" data-toggle="modal" href="javascript:;" data-rel="tooltip" data-original-title="专题" data-placement="top">
+									<i class="icon-tag bigger-130"></i>
+								</a>
+								<a class="blue" data-toggle="modal" href="javascript:;" data-rel="tooltip" data-original-title="发布" data-placement="top">
+									<i class="icon-mail-forward bigger-130"></i>
+								</a>
+	                            <a class="blue" data-toggle="modal" href="javascript:;" data-rel="tooltip" data-original-title="审核" data-placement="top">
+									<i class="icon-edit bigger-130"></i>
+								</a>
+								<a class="blue" data-toggle="modal" href="javascript:;" data-rel="tooltip" data-original-title="回复" data-placement="top">
+									<i class="icon-comment-alt bigger-130"></i>
+								</a>
+	                            <a class="red" href="javascript:void(0);" data-rel="tooltip" data-original-title="下线" data-placement="top">
+									<i class="icon-arrow-down bigger-130"></i>
+								</a>
+								<a class="red" href="javascript:void(0);" data-rel="tooltip" data-original-title="禁用/忽略" data-placement="top">
+									<i class="icon-ban-circle bigger-130"></i>
+								</a>
+								--%>
+							</div>
+                        </td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+			</table>
+		</div>
+     	<cqliving-frame:paginationAjax paramFormId="joke_infoFormId" dataUrl="joke_info_list.html" />
+	</div>
+</div>

@@ -1,0 +1,61 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>cqliving-framework</artifactId>
+	<version>1.1.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>cqliving-framework</name>
+	<description>cqliving framework.</description>
+	<url>http://cqliving.framework.com</url>
+
+	<!-- 继承基础配置,核心依赖包，编译选项和插件配置 -->
+	<parent>
+		<groupId>com.cqliving</groupId>
+		<artifactId>cqliving-parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>spring/framework/**/*.xml</include>
+					<include>META-INF/**</include>
+					<include>i18n/**</include>
+				</includes>
+			</resource>
+		</resources>
+	</build>
+
+	<!-- 支持site:depoly 到Nexue中 -->
+	<distributionManagement>
+		<site>
+			<id>nexus-site</id>
+			<url>dav:http://192.168.1.95:8081/nexus/content/sites/cqliving-site/cqliving-framework</url>
+		</site>
+	</distributionManagement>
+
+	<developers>
+		<developer>
+			<id>cqliving</id>
+			<name>cqliving</name>
+			<email>cqliving</email>
+			<organization>Infrastructure R&amp;D - Architecture Group</organization>
+			<organizationUrl>N/A</organizationUrl>
+			<roles>
+				<role>System Architect</role>
+			</roles>
+			<timezone>-8</timezone>
+			<url>N/A</url>
+		</developer>
+	</developers>
+	<scm>
+		<connection>scm:svn:http://${svn.username}:${svn.password}@11.11.40.19:8888/svn/CQLIVING_arch/respository/CQLIVING-framework/trunk</connection>
+		<developerConnection>scm:svn:http://${svn.username}:${svn.password}@11.11.40.19:8888/svn/CQLIVING_arch/respository/CQLIVING-framework/trunk</developerConnection>
+		<url>http://11.11.40.19:8888/svn/cqliving_arch/respository/CQLIVING-framework/trunk</url>
+	</scm>
+</project>

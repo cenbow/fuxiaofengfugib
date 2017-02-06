@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+	<description>applicationContext配置文件列表</description>
+	<!-- 实体对象注入 -->
+	<bean class="com.cqliving.tool.common.util.SpringUtil" />
+	
+	<bean id="configProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="locations">
+		    <list>
+		        <value>classpath*:application.development.properties</value>
+		    </list>
+		</property>        
+    </bean>
+	
+	<!-- 自定义服务 -->
+	<import resource="applicationContext-service.xml" />
+	<!-- 公共信息模块 -->
+	<import resource="classpath*:spring/applicationContext-basic-profiles.xml" />
+	<import resource="classpath*:spring/applicationContext-basic-service.xml" />
+	<import resource="classpath*:spring/applicationContext-basic-jpa.xml" />
+	 <!-- 日志模块 -->
+    <import resource="classpath*:spring/applicationContext-log-profiles.xml" />
+    <import resource="classpath*:spring/applicationContext-log-jpa.xml" />
+   
+    <!-- 业务模块 -->
+    <import resource="classpath*:spring/applicationContext-online-profiles.xml" />
+    <import resource="classpath*:spring/applicationContext-online-jpa.xml" />
+    <import resource="classpath*:spring/applicationContext-service-aop.xml" />
+	<!-- 加载 redis -->
+	<import resource="classpath*:spring/applicationContext-cache.xml"/>
+
+	<!-- aop -->
+	<!-- <import resource="classpath:spring/applicationContext-common-aop.xml"/> -->
+	<!-- 基础引用，包括controller扫描路径，属性文件，jpa配置 -->
+    <import resource="security2/applicationContext-shiro.xml" />
+	<!-- 国际化支持 -->
+	<import resource="applicationContext-locale.xml" />
+	<import resource="classpath*:spring/applicationContext-excel-template.xml" />
+    
+</beans>

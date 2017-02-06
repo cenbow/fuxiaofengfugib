@@ -1,0 +1,127 @@
+<nav>
+    <div class="row ajax_pagination">
+		<div class="col-sm-6 col-xs-12">
+			<label class="dataTables_info" id="sample-table-2_info">从
+				$pageStartNum 至 $pageEndNum 共 $totalCount 条
+			</label>
+			<label>&nbsp;&nbsp;&nbsp;</label>
+			<span id="sample-table-2_length" class="dataTables_length">
+				<label>每页 
+					<select size="1" name="sample-table-2_length" aria-controls="sample-table-2">
+						<option value="2" selected="selected">2</option>
+						#foreach($data in $pagingOptions.entrySet())
+							#if(${data.value} eq $pageSize)
+		                	<option value="${data.value}" selected="selected">${data.value}</option>
+			            	#else
+		                	<option value="${data.value}">${data.value}</option>
+			            	#end
+						#end
+					</select> 条
+				</label>
+				
+				<label>跳转到
+					<input style="margin-bottom: 0!important;margin: 0 4px;width:30px;height:25px;padding: 2px 3px;" value="$currentPage" name="currentPage"/>
+				</label>页
+			</span>
+		</div>
+		<div class="col-sm-6 col-xs-12">
+			<div class="dataTables_paginate paging_bootstrap">
+				<ul class="pagination">
+					#if($currentPage >= 2)
+			        	<li class="prev"><a href="javascript:void(0);" pageNo="1"><i class="icon-double-angle-left"></i></a></li>
+			        #else
+			        	<li class="prev disabled"><a href="javascript:void(0);"><i class="icon-double-angle-left"></i></a></li>
+			        #end
+			        #foreach ($number in [$pageStart..$pageEnd])
+			            #if($number eq $currentPage)
+			                <li class="active"><a href="javascript:void(0);">$number</a></li>
+			            #else
+			                <li><a href="javascript:void(0);" pageNo=${number}>$number</a></li>
+			            #end
+			        #end
+					#if($currentPage < $totalPage)
+			            <li class="next"><a href="javascript:void(0);" pageNo="${totalPage}"><i class="icon-double-angle-right"></i></a></li>
+			        #else
+			            <li class="next disabled"><a href="javascript:void(0);"><i class="icon-double-angle-right"></i></a></li>
+			        #end
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<script type="text/javascript">
+require(['jquery','cqliving_ajax','cqliving_dialog'],function($,cq_ajax,cqliving_dialog){
+	$(function() {
+	
+	   var loadId = "$loadId";
+	   var totalPage = "$totalPage";
+		var doPaginationAjax = function(paramData,currObj){
+			var url = "$dataUrl";
+			var paramFormId = "$paramFormId";
+			
+			var paramForm = paramFormId ? $("#" + paramFormId) : $(currObj).parents(".row").find("form");
+			if(!url){
+				if(paramForm.length > 0){
+					url = paramForm.attr("action");
+				}else{
+					alert("请求url不能为空");
+					return;
+				}
+			}
+			var params = [];
+			if(paramForm.length > 0){
+				params = paramForm.serializeArray();
+			}
+			//表示请求ajax分页
+			params.push({"name" : 'p',	"value" : 'y' });	
+			//判断传入是否有值
+			if(paramData){	
+			    $.each(paramData,function(name,value){		
+			        params.push({"name" : name,	"value" : value });	
+			    });
+			}
+			//$("#" + (loadId ? loadId : "table_content_page")).load(url, params, function(){});
+			cq_ajax.load("#" + (loadId ? loadId : "table_content_page"),url,params,function(){});
+		}
+		
+		loadId = loadId ? loadId : "table_content_page";
+		$("#"+loadId+" .ajax_pagination .pagination a[pageNo]").off("click").on("click",function(){
+			var countOfCurrentPage = $(this).parents(".ajax_pagination").find("select").val();
+			var paramData = {"pageNo":$(this).attr("pageNo"),"countOfCurrentPage":countOfCurrentPage};
+			doPaginationAjax(paramData,$(this));
+		});
+		
+		$(".ajax_pagination select").change(function () {
+			var countOfCurrentPage = $(this).parents(".ajax_pagination").find("select").val();
+			var paramData = {"countOfCurrentPage":countOfCurrentPage};
+			doPaginationAjax(paramData,$(this));
+	    });
+	    
+	    //获取焦点选中
+	    $("#"+loadId +" .ajax_pagination input[name=currentPage]").off("focus").on("focus",function(){
+	    	$(this).select();
+	    });
+	    //跳转到指定页数
+	    $("#"+loadId +" .ajax_pagination input[name=currentPage]").off("change").on("change",function(){
+	         var $this = $(this);
+	         var pageNo = $this.val();
+	         if(!pageNo){  return; }
+	         if(!parseInt(pageNo,10)){
+	            cqliving_dialog.error("请输入数字页码");
+	            $this.val("");
+	            return;
+	         }
+	         pageNo = parseInt(pageNo,10);
+	         if(pageNo>totalPage){
+	            cqliving_dialog.error("总共"+totalPage+"页，请重新输入");
+	            $this.val("");
+	            return;
+	         }
+	         var countOfCurrentPage = $(this).parents(".ajax_pagination").find("select").val();
+			 var paramData = {"pageNo":pageNo,"countOfCurrentPage":countOfCurrentPage};
+	         doPaginationAjax(paramData,$this);
+	    });
+	});
+});
+</script>

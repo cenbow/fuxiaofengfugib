@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>cqliving-online</artifactId>
+	<packaging>jar</packaging>
+
+	<name>cqliving-online</name>
+	<url>http://online.cqliving.com</url>
+
+	<parent>
+		<groupId>com.cqliving</groupId>
+		<artifactId>cqliving-parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	
+    <dependencies>
+    	<dependency>
+			<groupId>com.cqliving</groupId>
+			<artifactId>cqliving-manager-security</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+		
+        <dependency>
+           <groupId>com.cqliving</groupId>
+			<artifactId>cqliving-framework</artifactId>
+        </dependency>
+        
+        <dependency>
+           <groupId>com.cqliving</groupId>
+			<artifactId>cqliving-tool</artifactId>
+        </dependency>
+        
+        <dependency>
+			<groupId>com.cqliving</groupId>
+			  <artifactId>cqliving-redis</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.cqliving</groupId>
+			  <artifactId>cqliving-basic</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.cqliving</groupId>
+			  <artifactId>cqliving-jpush</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+	      <groupId>com.rabbitmq</groupId>
+	      <artifactId>amqp-client</artifactId>
+	      <version>3.5.1</version>
+    	</dependency>
+    	<dependency>
+	        <groupId>org.springframework.amqp</groupId>
+	        <artifactId>spring-rabbit</artifactId>
+	        <version>1.4.5.RELEASE</version>
+    	</dependency>
+    	
+    	<!-- 支付宝移动支付jar -->
+		<dependency>
+		  <groupId>com.alipay</groupId>
+		  <artifactId>alipay-sdk-java</artifactId>
+		  <version>V20160822</version>
+		</dependency>
+    </dependencies>
+	
+</project>

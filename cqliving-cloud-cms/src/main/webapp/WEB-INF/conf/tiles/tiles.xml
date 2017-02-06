@@ -1,0 +1,24 @@
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+
+    <definition name="baseLayout" template="/WEB-INF/jsp/layout/layout.jsp">
+        <put-attribute name="title" value="新华龙CMS系统" />
+        <put-attribute name="header" value="/WEB-INF/jsp/common_ace/header.jsp" />
+        <put-attribute name="sidebar" value="/WEB-INF/jsp/common_ace/sidebar.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/common_ace/menu_nav.jsp" />
+        <put-attribute name="setting" value="/WEB-INF/jsp/common_ace/setting.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/WEB-INF/jsp/layout/footer.jsp" />
+    </definition>
+
+    <definition name="index" template="/WEB-INF/jsp/index.jsp">
+    </definition>
+
+    <definition name="login" template="/WEB-INF/jsp/login.jsp">
+    </definition>
+
+    <definition name="help" template="/WEB-INF/jsp/help.jsp">
+    </definition>
+
+</tiles-definitions>

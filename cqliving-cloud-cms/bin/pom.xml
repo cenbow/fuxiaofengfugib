@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>cqliving-cloud-cms</artifactId>
+	<packaging>war</packaging>
+
+	<name>cqliving-cloud-cms</name>
+	<url>http://cqliving.cloud.cms.com</url>
+
+	<parent>
+		<groupId>com.cqliving</groupId>
+		<artifactId>cqliving-parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<dependencies>
+        <dependency>
+			<groupId>com.cqliving</groupId>
+			<artifactId>cqliving-manager-security</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+         <!-- 日志模块 -->
+		<dependency>
+            <groupId>com.cqliving</groupId>
+			<artifactId>cqliving-log</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <!-- 基础数据 -->
+        <dependency>
+            <groupId>com.cqliving</groupId>
+			<artifactId>cqliving-basic</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.cqliving</groupId>
+			<artifactId>cqliving-online</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        
+        <!-- 工具 -->
+        <dependency>
+            <groupId>com.cqliving</groupId>
+			<artifactId>cqliving-tool</artifactId>
+        </dependency>
+        
+        <dependency>
+		  <groupId>org.jodd</groupId>
+		  <artifactId>jodd-wot</artifactId>
+		  <version>3.2.7</version>
+		</dependency>
+        <!-- jsp 模板 -->
+        <dependency>
+            <groupId>org.apache.tiles</groupId>
+            <artifactId>tiles-extras</artifactId>
+            <version>2.2.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.tiles</groupId>
+            <artifactId>tiles-servlet</artifactId>
+            <version>2.2.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.tiles</groupId>
+            <artifactId>tiles-jsp</artifactId>
+            <version>2.2.2</version>
+        </dependency>
+		
+		<!-- 百度编辑器 -->
+		<dependency>
+		  <groupId>com.cqliving</groupId>
+		  <artifactId>commons-io</artifactId>
+		  <version>2.4</version>
+		</dependency>
+		 <dependency>
+		  <groupId>com.cqliving</groupId>
+		  <artifactId>ueditor</artifactId>
+		  <version>1.1.2</version>
+		</dependency>
+		<dependency>
+		  <groupId>com.cqliving</groupId>
+		  <artifactId>json</artifactId>
+		  <version>1.0.0</version>
+		</dependency>
+		<!-- 七牛 -->
+		<dependency>
+		  <groupId>com.cqliving</groupId>
+		  <artifactId>cqliving-qiniu</artifactId>
+		  <version>1.0.0-SNAPSHOT</version>
+		</dependency>
+		
+	</dependencies>
+
+    <!--
+    多环境配置
+    打包命令 mvn clean package -Dmaven.test.skip=true -P dev|test|prod
+    或执行 mvn 文件夹下的打包脚本
+    -->
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <package.environment>dev</package.environment>
+            </properties>
+
+        </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <package.environment>test</package.environment>
+            </properties>
+        </profile>
+        <profile>
+            <id>history</id>
+            <properties>
+                <package.environment>history</package.environment>
+            </properties>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <package.environment>prod</package.environment>
+            </properties>
+        </profile>
+        <profile>
+            <id>ready</id>
+            <properties>
+                <package.environment>ready</package.environment>
+            </properties>
+        </profile>
+    </profiles>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <warName>cqliving-cloud-cms</warName>
+                    <webResources>
+                        <resource>
+                            <!--  多环境打包 -->
+                            <directory>profile/${package.environment}</directory>
+                            <targetPath>WEB-INF/classes</targetPath>
+                        </resource>
+                    </webResources>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

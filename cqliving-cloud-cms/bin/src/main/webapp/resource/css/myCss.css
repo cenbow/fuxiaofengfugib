@@ -1,0 +1,218 @@
+@charset "utf-8";
+
+body{
+	font-family:"Microsoft YaHei","微软雅黑","SimHei","黑体"; min-width:1100px; line-height:1.8em;
+	
+}
+.btn{border-radius:2px;}
+.form-horizontal{margin:0; padding:10px 0 0 0; float:left; width:100%;}
+	.form-list .form-group .daterange{
+	background-color:#fff; border:1px solid #d5d5d5; color:#333; width:100%; padding:5px 0;}
+select.form-control{ height:34px;}
+.special-list .col-sm-3{ width:20%; }
+.form-list .btn.btn-sm{ height:28px; line-height:14px;}
+.form-group .text-right{ float:right; margin-right:2%;}
+.input-group-btn .btn{line-height:18px;}/*固定带有下拉按钮的输入框，按钮高度，以适应firefox和IE*/
+.nav-list>li>a{ font-size:14px !important; height:46px !important; line-height:44px !important;}
+.btn{ text-shadow:0 0 !important;}
+.table thead tr{ background:#eff3f8; color:#333;}
+.label{line-height:1.2}
+.clear{clear:both;}
+.version-view p.form-control-static{ border:1px solid #bbb; background:#ddd; padding:5px 2px;}
+.radio .radio-2,.checkbox .checkbox-2{ margin-right:20px;}
+.radio, .checkbox{padding-left:12px;}
+.version-detail input[readonly]{background:#fff !important; cursor:text;}
+.version-detail .btn-sm,.version-view .btn-sm{ font-size:14px;}
+.modal-dialog{padding-top:150px; padding-bottom:150px; min-width:700px;}
+.modal-dialog .modal-header a{float: right;padding-right: 16px;}
+.col-10{width:200px;}
+input#createTime{ cursor:default;}
+input[type=radio].ace+.lbl::before{line-height:16px;}
+/* .modal-header{ padding:0 15px;} 弹出层header高度没有了*/
+.modal-header .close{font-size: 26px;}
+.header.blue,h1,h2,h3,h4{font-family:'Microsoft Yahei'}
+h3{ font-size:20px; margin-top:10px;}
+.modal-body{ background-color:#fff;}
+.modal-footer{ margin-top:0;}
+.preview-dialog{background: url(../images/iphone6.png) no-repeat; min-width: 375px;width: 425px;height: 860px;background-size: contain;padding:95px 25px;}
+.preview-dialog .modal-body{height: 563px; overflow-y: scroll !important;}
+.highlight{ color:red;}
+.bootbox .modal-header{ padding:15px;}
+.detail_title,.detail_name,.detail_content{ width:98%; margin:0 1%; padding:5px 0; }
+.detail_title{font-size:18px; font-weight:bold;}
+.detail_name{ color:#666; border-bottom:1px solid #ddd; font-size:12px;}
+.detail_content{line-height:2em;font-size:14px;}
+.page-content .widget-box{ width:98%; margin:10px 1%; border:0; clear:both;position:relative;top:10px;}
+.page-content .widget-header{background-image:none; background-color:#eef6ff; color:#277cd9;border:1px solid #ddd;}
+.page-content .widget-header h4{ font-size:14px;}
+.page-content .widget-body{border:1px solid #ddd; border-top:0;}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control{
+	cursor:default
+}
+.modal-content .form-horizontal{ background-color:#f9f9f9;}
+.row-fluid{ width:98%; margin:5px 1%;}
+.ace-thumbnails>li{ border:1px solid #ccc; width:150px;  float:left;}
+.ace-thumbnails>li:hover{ border:1px solid #438eb9;}
+.ace-thumbnails input[type='file']{opacity:0;position:relative;z-index:2;cursor:pointer;left:-98px;filter:alpha(opacity=0);top:8px;}
+.ace-thumbnails input[type='file'] + label{color:#fff;text-align:center;line-height:32px;display:block;width:140px;height:30px;background:#00b7ee;position:absolute;z-index:1;top:32px;left:4px;border-radius:3px;}
+/*上方css修改上传图片的样式*/
+.row-fluid ul.ace-thumbnails li img{ width:100%; border:0;}
+.form-group input[disabled], .form-group input:disabled,.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control{
+	color:#777!important; background-color:#f9f9f9!important;
+}
+.well{ background:#fff; border:0; border-top:1px solid #eee;padding:10px 0 5px 0; margin-bottom:5px; margin-top:5px;}
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"]{padding:6px 12px;}
+.chosen-container{width:100% !important;} /*主要使标签框宽度自适应*/
+.chosen-container .chosen-choices{background-image:none;border: 1px solid #d5d5d5;}
+#edui1_iframeholder{min-height:300px;}
+.btn-search{ text-align:right;}
+.form-group-1 div{ margin:8px 0;}
+.div-collect .input-group-addon{padding:0;}
+.btn-input{height:32px;}
+#login-box{border-radius:5px;}
+.login-title h1{font-family:"微软雅黑";}
+.login-layout .main-container .main-content{margin-top:10%;}
+.login-layout{background:url('../images/login_bg.jpg');background-size:cover}
+.login-layout .widget-box{background-color:transparent;padding:0}
+.login-layout .input-icon input{background:#ebe6e2;padding:10px 16px !important;height:42px;border: 1px solid rgba(0,0,0,0.05);border-radius:3px !important;}
+.header.blue{font-family:'Microsoft Yahei'}
+.login-layout .input-icon>[class*="icon-"]{top:8px;right:8px}
+.ace-settings-container{top:1px;}
+.dataTables_wrapper .row:last-child{border-top:0;}
+.dataTables_wrapper .row:last-child{padding:10px 0 6px 0; border:1px solid #ddd; border-top:0;}
+.row.ajax_pagination .col-sm-3{height:36px; display:block; line-height:36px;}
+.fieldset-form fieldset{width:96%; margin:5px 2%; border:1px solid #ddd; float:left; padding:5px 2%;}
+.fieldset-form legend{width:auto; border:0;}
+.table thead>tr>th, .table tbody>tr>th, .table tfoot>tr>th, .table thead>tr>td, .table tbody>tr>td, .table tfoot>tr>td{vertical-align:middle}
+.table thead>tr>th:last-child{width:150px;}
+.action-buttons a{margin:3px;}
+.form-horizontal .control-label, .form-horizontal .radio, .form-horizontal .checkbox, .form-horizontal .radio-inline, .form-horizontal .checkbox-inline{padding-top:0px;}
+input[type=checkbox].ace+.lbl::before, input[type=radio].ace+.lbl::before{vertical-align:baseline;margin-right:5px; line-height: 16px;}
+
+.angular-ui-tree-nodes > li{margin: .5em 0;border:1px solid #ddd}
+.angular-ui-tree-nodes li .group-title{border:0;border-bottom:1px solid #ddd;background-color:#f6f6f6}
+.angular-ui-tree-nodes li .group-title:hover{background-color:#ededed}
+.angular-ui-tree-nodes .group-title + ol > li{border-right:0}
+.angular-ui-tree-nodes li .category-title{border:0;background-color:#f9f9f9;line-height:26px}
+.angular-ui-tree-nodes li .category-title:hover{background-color:#f6f6f6}
+.angular-ui-tree-nodes .btn-xs>[class*="icon-"], .btn-minier>[class*="icon-"]{margin:0}
+.label-words{padding-top: 4px;}
+.help-block{margin-top:0;margin-bottom:2px;}
+
+.chosen-container>.chosen-single, [class*="chosen-container"]>.chosen-single{height:34px;line-height:34px;}/*select to的高度样式*/
+
+.thumbnail{height:320px;overflow-y:auto}
+
+.widget-main .checkbox-2{display: inline-block;min-width:110px;}
+
+.skin-3 .main-container:after{background:#fff}
+
+/*选择地区css*/
+.multiselectForm .widget-main input[type="checkbox"]{
+	position: relative;
+	top: 4px;
+	margin-right: 5px;
+	cursor: pointer;
+}
+.multiselectForm .widget-main .icon-angle-down{
+	padding-left: 5px;
+}
+.multiselectForm  .widget-main .checkbox-2 {
+	position: relative;
+	padding-left: 8px;
+	border: 1px solid transparent;
+	cursor: pointer;
+	font-size: 13px;
+}
+.multiselectForm  .widget-main .checkMore .checkbox-2{
+	border: 0;
+}
+.multiselectForm .widget-main .checkMore{
+	position: absolute;
+	top: 26px;
+	width: 360px;
+	padding: 3px 0;
+	background: #FFFEC6;
+	border: 1px solid #ddd;
+	z-index: 300;
+	display: none;
+	font-size: 0;
+}
+.multiselectForm .widget-main .checkMore .cityClose{
+	float: right;
+	margin: 0 6px 6px 0; 
+}
+.multiselectForm  .widget-main .multiActive{
+	background: #FFFEC6;
+	border: 1px solid #ddd;
+	box-sizing: border-box;
+	border-bottom: 1px solid #FFFEC6;
+	z-index: 600;
+}
+.multiselectForm .cityNumber{
+	color: #438eb9;
+}
+.ecity {
+	position: relative;
+	float: left;
+}
+.gcity, .provinceList {
+	display: inline-block;
+}
+
+.ace-thumbnails>li{
+	border: none;
+}
+.ace-thumbnails>li>input{
+	width: 100%;
+}
+.ace-thumbnails>li>.topInput{
+	position: relative;
+	overflow: hidden;
+}
+.ace-thumbnails>li>.topInput>.tools.tools-top {
+    width: auto;
+    height: 28px;
+    left: 0;
+    right: 0;
+    top: -30px;
+    bottom: auto;
+}
+.ace-thumbnails>li>.topInput>.tools {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -30px;
+    width: 24px;
+    background-color: rgba(0,0,0,0.55);
+    text-align: center;
+    vertical-align: middle;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+.ace-thumbnails>li:hover{
+	border: none;
+}
+.ace-thumbnails>li:hover>.topInput>.tools.tools-top {
+    bottom: auto;
+    top: 0;
+}
+.ace-thumbnails>li:hover>.topInput>.tools {
+    left: 0;
+}
+.stars span{
+	width: 20px;
+	height: 20px;
+	margin-top: 6px;
+	display: inline-block;
+	background: url('../images/star.png') no-repeat;
+	background-size: contain;
+}
+.stars .star_on{
+	background: url('../images/star_on.png') no-repeat;
+	background-size: contain;
+}
+
+@media screen and (max-width:1450px){
+	.table thead>tr>th:last-child{width:70px;}
+}

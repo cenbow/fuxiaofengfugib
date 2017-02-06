@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>原创jQuery文本框输入字数字符个数限制提示插件 - JS代码网</title>
+<meta name="Keywords" content="JS代码,JS特效代码,文本框字数限制提示,jQuery文本输入字数限制,jQuery文本输入字数统计,JS文本输入字数限制提示,动态文本输入字数限制" />
+<meta name="description" content="类似微博文字输入限制提示插件，非常实用的特效，值得下载使用" />
+<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/wenzi.js"></script>
+<script type="text/javascript">
+ $(function(){
+   //插件
+   $(".per-wbox").myWords({   //输入框字数
+        obj_opts:"textarea",
+        obj_Maxnum:400,//要是只能输入140个字  那这里就是280
+        obj_Lnum:".sns-num"
+    });
+})
+</script>
+<style type="text/css">
+/*全局*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-family:"Microsoft YaHei","微软雅黑",tahoma,arial,simsun,"宋体";}
+ul,ol,li{ list-style: none;}
+input,button,select,textarea{outline:none;}
+textarea{resize:none;}
+body{ background: #f0f0f0; font-size: 12px; color: #808080; }
+/*内容*/
+.per-wbox{ width: 547px; margin:10px auto;}
+.per-wbox .beizhu{ width:547px; height: 100px; text-align: left; border-radius: 3px; border:1px solid #d2d2d2; box-shadow: 1px 1px 3px rgba(34, 25, 25, 0.2); padding: 5px; overflow: hidden;}
+.per-wbox p{ text-align: right;}
+.per-wbox .sns-num{ font-size: 12px; color: #999;}
+.per-wbox .sns-num em{ font-weight: bold; font-size: 14px;}
+.btn{ background: url(images/space_icons.png) no-repeat scroll 0 0; border:none medium; height: 28px; width: 68px; margin-top: 10px; font-size: 14px; color: #fff;}
+/*.tiptest{ color:#C30; font-size: 12px;}*/
+</style>
+<!--JS代码网顶部CSS-->
+<link href="http://www.js-css.cn/jscode/jscode.css" rel="stylesheet" />
+<!--JS代码网顶部CSS-->
+
+</head>
+<body>
+<!--JS代码网头部-->
+<div class="back" style="margin-bottom:20px;"> 
+  <div class="pl10">
+    <ul class="ulcls">
+	<li class="logowidth">
+	<a href="http://www.js-css.cn" title="JS代码网"><img src="http://www.js-css.cn/images/toplogo.png" border="0"/></a>	
+	</li>
+	<li style="width:800px;">
+	<div class="menupos">
+	<ul style="list-style:none;">
+	<li class="firstli"><a href="http://www.js-css.cn" class="lia">首页</a></li>
+	<li class="sencli"><a href="http://www.js-css.cn/a/jscode/" class="lia">JS代码大全</a></li>
+	<li class="threeli"><a href="http://www.js-css.cn/a/openframe/jqueryapi/" class="lia">jQuery 插件</a></li>
+	<li class="threeli"><a href="http://www.js-css.cn/a/css/" class="lia">DIV+CSS</a></li>
+	<li class="threeli"><a href="http://www.js-css.cn/a/html5/" class="lia">HTML5+CSS3</a></li>
+	<li class="threeli"><a href="http://www.js-css.cn/a/openframe/" class="lia">开源项目</a></li>
+	<li class="threeli"><a href="http://www.js-css.cn/a/tools/" class="lia">资源工具</a></li>	
+	</ul>
+	</div>
+	</li>     
+    </ul>
+  </div>
+  <div class="textpos">整理：<a href="http://www.js-css.cn" class="texta">JS代码网</a><br>来源：<a href="#" class="texta">互联网</a> <br>本站QQ交流学习群：<a href="#" class="texta">281362453</a> <br> 赞助网店：<a href="http://wuhaodian.taobao.com" class="texta">http://wuhaodian.taobao.com</a></div>
+</div>
+<!--JS代码网头部-->
+<form method="post" id="form1">
+<!-- 输入框start -->
+ <div class="per-wbox">
+   <textarea name="" rows="" class="beizhu"></textarea>
+   <p>
+   	 <span class="sns-num">还能输入<em>210</em>个字</span>
+   	 <input name="提交" type="submit" class="btn" value="发 布"  />
+   </p>
+ </div>
+ <!-- 输入框end -->
+</form>
+</body>
+</html>
