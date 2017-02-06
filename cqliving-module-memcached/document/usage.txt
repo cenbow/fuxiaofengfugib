@@ -1,0 +1,27 @@
+﻿配置
+1、Maven依赖配置
+<dependency>
+  <groupId>com.living</groupId>
+  <artifactId>cqliving-module-memcached</artifactId>
+  <version>1.0.1</version>
+</dependency>
+
+2、项目配置
+2.1、在目标项目中import默认的配置文件：
+<import resource="classpath:/spring/module/memcached/applicationContext-memcached.xml" />
+2.2、配置memcached服务器参数
+在目标工程环境classpath根下（如：/src/main/resource）放置memcached.properties，加入配置项:
+memcached.servers=host1:port,host2:port ...
+或者，可以在目标项目已有配置文件(如：config.properties)中加入memcached.servers配置，
+如果该属性文件通过context:property-placeholder配置到spring容器环境中，则组件会自动
+找到对应的配置项加载。
+
+
+v1.0.0
+1、提供对spymemcached客户的基础能力封装。包括：添加，设置，删除，安全操作，CAS一致性操作，计数器等。
+2、提供spring集成和配置
+
+v1.0.1
+提供listKeys功能，支持对memcached集群所有key的遍历。同时支持按前缀或TOP数量查询。
+
+

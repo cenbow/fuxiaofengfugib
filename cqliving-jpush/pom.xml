@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>cqliving-jpush</artifactId>
+
+	<name>cqliving-jpush</name>
+	<url>http://cqliving.jpush.com</url>
+	
+	<properties>
+		<jpush.version>3.2.9</jpush.version>
+	</properties>
+
+	<parent>
+		<groupId>com.cqliving</groupId>
+		<artifactId>cqliving-parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.cqliving</groupId>
+			<artifactId>cqliving-framework</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.cqliving</groupId>
+			<artifactId>cqliving-tool</artifactId>
+		</dependency>
+
+		<!-- 极光推送 https://www.jpush.cn/ -->
+		<dependency>
+			<groupId>cn.jpush.api</groupId>
+			<artifactId>jpush-client</artifactId>
+			<version>${jpush.version}</version>
+		</dependency>
+	</dependencies>
+
+</project>

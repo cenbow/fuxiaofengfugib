@@ -1,0 +1,37 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>cqliving-module-memcached</artifactId>
+	<packaging>jar</packaging>
+
+	<name>cqliving-module-memcached</name>
+	<url>http://maven.apache.org</url>
+
+	<parent>
+		<groupId>com.cqliving</groupId>
+		<artifactId>cqliving-parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+    <dependencies>
+		<dependency>
+			<groupId>spy</groupId>
+			<artifactId>spymemcached</artifactId>
+			<version>${spymemcached.version}</version>
+		</dependency>		
+	</dependencies>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>**/*.xml</include>
+				</includes>
+			</resource>
+		</resources>
+	</build>
+
+</project>

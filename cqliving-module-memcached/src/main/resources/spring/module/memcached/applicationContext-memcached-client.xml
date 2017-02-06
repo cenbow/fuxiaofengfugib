@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+	<context:property-placeholder ignore-resource-not-found="true" location="classpath:/memcached.properties" />
+	<!-- SpyMemcached客户端 -->
+	<bean id="spyMemcachedClient" class="com.feinno.module.memcached.SpyMemcachedClient">
+		<property name="memcachedClient">
+			<bean class="net.spy.memcached.spring.MemcachedClientFactoryBean">
+				<property name="servers" value="${memcached.servers}" />
+				<property name="protocol" value="TEXT" />
+				<property name="opTimeout" value="1000" />
+				<property name="timeoutExceptionThreshold" value="1998" />
+				<property name="hashAlg">
+					<value type="net.spy.memcached.DefaultHashAlgorithm">KETAMA_HASH</value>
+				</property>
+				<property name="locatorType" value="CONSISTENT" />
+				<property name="failureMode" value="Redistribute" />
+				<property name="useNagleAlgorithm" value="false" />
+			</bean>
+		</property>
+
+		<property name="updateTimeout" value="2500" />
+		<property name="shutdownTimeout" value="2500" />
+		<property name="expiredTime" value="1800000" />
+	</bean>
+</beans>
